@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   devise_for :users
   root to: 'pages#home'
 
-  resources :profile_traits, except: :destroy
+  resources :profile_traits, only: %i[create update]
 
   resources :containers, except: %i[index show destroy] do
     resources :cards do
