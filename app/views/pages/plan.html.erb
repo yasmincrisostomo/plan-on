@@ -1,0 +1,11 @@
+<h1>Planner</h1>
+<% @containers = Container.all %>
+
+<div class="row row-cols-2 row-cols-sm-3 row-cols-md-4 row-cols-lg-4 m-4 d-flex justify-content-around">
+        <% @containers.each do |container| %>
+          <h3>
+            <%= container.card_category %>
+          </h3>
+          <%# <%= render "container-box", container: container %> %>
+        <% end %>
+    </div>

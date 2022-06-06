@@ -1,11 +1,11 @@
 Rails.application.routes.draw do
   devise_for :users
-  root to: 'pages#home'
+  root to: 'pages#home', as: 'home'
 
   resources :profile_traits, only: %i[create update]
 
   resources :containers, except: %i[index show destroy] do
-    resources :cards do
+    resources :cards, except: :index do
       resources :tags, only: %i[new create]
     end
   end
