@@ -10,10 +10,53 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_06_06_173645) do
+ActiveRecord::Schema.define(version: 2022_06_06_190300) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "cards", force: :cascade do |t|
+    t.string "title"
+    t.text "description"
+    t.bigint "container_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["container_id"], name: "index_cards_on_container_id"
+  end
+
+  create_table "containers", force: :cascade do |t|
+    t.string "card_category"
+    t.bigint "user_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_containers_on_user_id"
+  end
+
+  create_table "profile_traits", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.bigint "trait_id", null: false
+    t.string "user_answer"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["trait_id"], name: "index_profile_traits_on_trait_id"
+    t.index ["user_id"], name: "index_profile_traits_on_user_id"
+  end
+
+  create_table "tags", force: :cascade do |t|
+    t.string "name"
+    t.string "color"
+    t.bigint "card_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["card_id"], name: "index_tags_on_card_id"
+  end
+
+  create_table "traits", force: :cascade do |t|
+    t.string "name"
+    t.string "message"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -23,8 +66,15 @@ ActiveRecord::Schema.define(version: 2022_06_06_173645) do
     t.datetime "remember_created_at"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "name"
+    t.string "type_of_student"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "cards", "containers"
+  add_foreign_key "containers", "users"
+  add_foreign_key "profile_traits", "traits"
+  add_foreign_key "profile_traits", "users"
+  add_foreign_key "tags", "cards"
 end
