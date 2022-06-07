@@ -1,7 +1,0 @@
-<% @profile_traits.each do |profile_trait| %>
-  <%= profile_trait.trait.name %>
-  <%= simple_form_for profile_trait do |f| %>
-        <%= f.input :user_answer %>
-        <%= f.button :submit, value: "Update", class: 'btn btn-light-blue rounded-pill' %>
-      <% end %>
-<% end %>
