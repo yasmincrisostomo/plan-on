@@ -1,22 +1,26 @@
-<h1>Planner</h1>
+<h1>Planejamento de camadas</h1>
 
 <div class="kanban" data-controller="kanban">
+
   <% @containers.each do |container| %>
-    <ul>
+    <div class="d-flex flex-column card">
       <li class="kanban-col-name">
         <%= container.card_category %>
       </li>
-    </ul>
-    <ul class="kanban-col" data-kanban-target="card">
 
-      <% container.cards.order(:position).each do |card| %>
-        <li class="kanban-col-item" >
-          <%= card.title %>
-          <%= card.description %>
-        </li>
-      <% end %>
+      <ul class="kanban-col" data-kanban-target="card">
+        <% container.cards.order(:position).each do |card| %>
+          <li class="kanban-col-item" >
+            <%= card.title %>
+            <%= card.description %>
+          </li>
+        <% end %>
+      </ul>
 
-    </ul>
+      <li>
+        <%= link_to "+ Add", new_container_card_path(container), class: "btn-primary btn" %>
+      </li>
+    </div>
   <% end %>
 </div>
 
