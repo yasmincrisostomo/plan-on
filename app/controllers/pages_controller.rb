@@ -11,6 +11,8 @@ class PagesController < ApplicationController
   end
 
   def plan
+    @containers = Container.all
+    @cards = Card.all
   end
 
   def profile

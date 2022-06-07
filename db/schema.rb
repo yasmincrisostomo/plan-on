@@ -49,6 +49,7 @@ ActiveRecord::Schema.define(version: 2022_06_07_151148) do
     t.bigint "container_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "position"
     t.index ["container_id"], name: "index_cards_on_container_id"
   end
 
