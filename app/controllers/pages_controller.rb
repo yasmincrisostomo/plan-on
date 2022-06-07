@@ -14,6 +14,5 @@ class PagesController < ApplicationController
   end
 
   def profile
-    @profile_traits = current_user.profile_traits
   end
 end
