@@ -1,6 +1,6 @@
 .navbar-planon {
   justify-content: space-between;
-  background: $lavender;
+  background: $purple;
   .navbar-nav .nav-link {
     color: white;
   }
@@ -17,14 +17,14 @@
 
 .dropdown-menu {
   border-radius: 6px;
-  background-color: $lavender;
+  background-color: $purple;
   opacity: 0.7;
 }
 
 .dropdown-item {
   color: white;
   &:hover {
-    background-color: $violet;
+    background-color: $light-purple;
     color: white;
   }
 }

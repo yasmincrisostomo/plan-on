@@ -2,19 +2,19 @@ User.destroy_all
 
 Trait.destroy_all
 
-Trait.create!(name: "Concentração", message: "Fique longe de distrações!")
+Trait.create!(name: "Concentration", message: "Fique longe de distrações!")
 
-Trait.create!(name: "Constância", message: "Melhore!")
+Trait.create!(name: "Constancy", message: "Melhore!")
 
-Trait.create!(name: "Motivação", message: "Melhore!")
+Trait.create!(name: "Motivation", message: "Melhore!")
 
-Trait.create!(name: "Organização", message: "Melhore!")
+Trait.create!(name: "Organization", message: "Melhore!")
 
-Trait.create!(name: "Descanso", message: "Melhore!")
+Trait.create!(name: "Rest", message: "Melhore!")
 
-Trait.create!(name: "Equilíbrio emocional", message: "Melhore!")
+Trait.create!(name: "Emotional balance", message: "Melhore!")
 
-Trait.create!(name: "Qualidade do material", message: "Melhore!")
+Trait.create!(name: "Material quality", message: "Melhore!")
 
 user = User.create!(email: 'alguem@email.com', password: '123123', name: 'Alguem', type_of_student: 'Folgado')
 
