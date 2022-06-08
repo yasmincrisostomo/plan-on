@@ -4,39 +4,54 @@ import { Controller } from "stimulus"
 export default class extends Controller {
   static targets = [ "card" ]
 
-  saveKanban(attributes) {
-    console.log(attributes)
-  };
 
   connect() {
-    this.cardTargets.forEach((card) => {
-      new Sortable(card, {
-          group: 'kanban', // set both lists to same group
+    const saveKanbanBinded = this.saveKanban.bind(null, this.cardTargets);
+    this.cardTargets.forEach((card) => { // targets all cards
+      new Sortable(card, { // makes'em sortable
+          group: 'kanban', // set all lists to same group (to change columns)
           animation: 300,
-          onEnd: this.saveKanban,
-          store: {
-            /**
-             * Get the order of elements. Called once during initialization.
-             * @param   {Sortable}  sortable
-             * @returns {Array}
-             */
-            get: function (sortable) {
-              var order = localStorage.getItem(sortable.options.group.name);
-              return order ? order.split('|') : [];
-            },
-
-            /**
-             * Save the order of elements. Called onEnd (when the item is dropped).
-             * @param {Sortable}  sortable
-             */
-            set: function (sortable) {
-              var order = sortable.toArray();
-              localStorage.setItem(sortable.options.group.name, order.join('|'));
-            }
-          }
+          onEnd: saveKanbanBinded,
+          onEnd: () => this.saveKanban('move') // saves position after move
       });
     });
-
   }
 
+  kanbanForm(){
+    document.querySelector(".kanban-form-input");
+  }
+
+  saveKanban(move) {
+    // position storage model
+    // {"columns": [
+    //     { "id": 1, "itemIds": [3, 2] },
+    //     { "id": 2, "itemIds": [4, 5] },
+    //     { "id": 3, "itemIds": [6, 1] }
+    //   ]}
+
+    const kanbanIds = {"columns": []}; // estrutura que salva positions
+    this.cardTargets.forEach(container => { // iterando sobre todos os cards debaixo do ctlr
+      const itemIds = []; // init do array de positions por container
+      console.log(container)
+
+      container.querySelectorAll(".kanban-col-item") // select dos cards via classe
+            // para cada card, lançar em itemIds sua position
+        .forEach(card => itemIds.push(
+          card
+          // Number.parseInt(card.dataset.itemId,10)
+          ));
+
+      kanbanIds.columns.push(
+        {
+          // 'id': Number.parseInt(container.dataset.containerId,10),
+          'id': container,
+          'itemIds': itemIds
+        });
+    });
+    // this.kanbanForm.value = JSON.stringify(kanbanIds);
+    // this.kanbanForm.value = kanbanIds;
+    this.kanbanForm.value = 22;
+    console.log(kanbanIds);
+    console.log(move)
+  };
 }
