@@ -1,9 +1,5 @@
 <h1>Planejamento de camadas</h1>
 
-<%= form_with(url: pages_sort_path, method: :patch) do |f|%>
-  <%= f.text_field 'containers[kanbanIds]', class: "kanban-form-input" %>
-  <%= f.submit "Saved changes" %>
-<% end %>
 
 <div class="kanban" data-controller="kanban">
 
@@ -13,9 +9,11 @@
         <%= container.card_category %>
       </li>
 
-      <ul class="kanban-col" data-kanban-target="card">
+<%# CARDS iteration %>
+      <ul class="kanban-col" data-kanban-target="container" data-container-id="<%= container.id %>">
         <% container.cards.order(:position).each do |card| %>
-          <li class="kanban-col-item" >
+          <%# card %>
+          <li class="kanban-col-item" data-kanban-target="card" data-card-id="<%= card.id %>">
             <%= card.title %>
             <%= card.description %>
           </li>
