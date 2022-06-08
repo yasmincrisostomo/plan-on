@@ -1,6 +1,22 @@
-<div class="dash-container">
-  <div class="dash-banner">
-    <h2><strong>Dashboard</strong></h2>
+<div class="dash-banner">
+  <h2><strong>Dashboard</strong></h2>
+</div>
+
+<%  @profile_traits.each do |profiles_trait| %>
+  <%= profiles_trait.trait.name %>
+  <%= profiles_trait.trait.message %>
+<% end %>
+
+<div class="cards m-5">
+  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
+    What do you need to work on this week:
   </div>
 
+  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/lunch.jpg)">
+    Lunch
+  </div>
+
+  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/dinner.jpg)">
+    Dinner
+  </div>
 </div>
