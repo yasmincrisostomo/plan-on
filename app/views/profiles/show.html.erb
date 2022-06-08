@@ -1,3 +1,8 @@
-<%= @hash %>
-
 <%= link_to "Editar", edit_profiles_path %>
+
+<div class="d-flex justify-content-center w-100">
+  <div data-controller="chart" data-chart-values-value='<%= @hash.to_json %>' class="w-50">
+    <canvas data-chart-target="canvas"></canvas>
+    <%= button_tag "Download", data: {chart_target: "button"} %>
+  </div>
+</div>
