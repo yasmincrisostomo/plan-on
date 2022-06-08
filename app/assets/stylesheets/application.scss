@@ -11,5 +11,9 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
-@import "pages/home";
-@import "pages/plan";
+
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
