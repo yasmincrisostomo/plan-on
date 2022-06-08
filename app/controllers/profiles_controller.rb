@@ -9,6 +9,10 @@ class ProfilesController < ApplicationController
   end
 
   def show
+    @hash = {}
+    current_user.profile_traits.each do |pro|
+      @hash[pro.trait.name] = pro.user_answer
+    end
   end
 
   private

@@ -1,0 +1,23 @@
+.category-selector {
+  position: absolute;
+  transform: scale(0);
+}
+
+.category-selector + label {
+  display: block;
+  cursor: pointer;
+  box-sizing: border-box;
+  width: 100%;
+  font-size: 12px;
+  text-align: center;
+  padding: 10px 15px;
+  border: 1px solid #EAEAEA;
+  border-radius: 4px;
+  background-color: rgba($color: $blue, $alpha: 0.5);
+  color: white !important;
+}
+
+.category-selector:checked + label {
+  color: white !important;
+  background-color: rgba($color: $blue, $alpha: 0.8);
+}
