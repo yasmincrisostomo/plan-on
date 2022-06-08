@@ -1,17 +1,17 @@
 .footer-dark {
   padding: 40px 0;
-  color:#B1D0E0;
-  background-color:#6692E3;
+  color: #B1D0E0;
+  background-color: $purple;
   margin-top: auto;
 }
 
 .footer-dark .item.text p {
-  opacity:0.6;
-  margin-bottom:0;
+  opacity: 0.6;
+  margin-bottom: 0;
 }
 
 .footer-dark .item.social {
-  text-align:center;
+  text-align: center;
 }
 
 .footer-dark .item.social > a {
@@ -24,12 +24,12 @@
   border-radius:50%;
   box-shadow:0 0 0 1px rgba(255,255,255,0.4);
   margin:0 8px;
-  color:black;
-  opacity:0.75;
+  color: $baby-purple;
 }
 
 .footer-dark .item.social > a:hover {
   opacity:0.9;
+  color: $light-purple;
 }
 
 .footer-dark .copyright {

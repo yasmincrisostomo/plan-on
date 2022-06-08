@@ -1,3 +1,12 @@
+.roda-da-vida {
+  background: rgb(109,91,152);
+  background: radial-gradient(circle, rgba(109,91,152,1) 0%, rgba(121,129,168,1) 51%, rgba(157,119,155,1) 100%);
+}
+
+.profile-form {
+  text-align: center;
+}
+
 .category-selector {
   position: absolute;
   transform: scale(0);
@@ -13,11 +22,11 @@
   padding: 10px 15px;
   border: 1px solid #EAEAEA;
   border-radius: 4px;
-  background-color: rgba($color: $blue, $alpha: 0.5);
+  background-color: rgba($color: $purple, $alpha: 0.5);
   color: white !important;
 }
 
 .category-selector:checked + label {
   color: white !important;
-  background-color: rgba($color: $blue, $alpha: 0.8);
+  background-color: rgba($color: $purple, $alpha: 0.8);
 }
