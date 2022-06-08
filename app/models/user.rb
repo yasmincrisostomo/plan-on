@@ -4,6 +4,8 @@ class User < ApplicationRecord
   after_create :create_profiles_traits
 
   has_many :profile_traits, dependent: :destroy
+  accepts_nested_attributes_for :profile_traits
+
   has_many :containers, dependent: :destroy
   has_one_attached :avatar
 

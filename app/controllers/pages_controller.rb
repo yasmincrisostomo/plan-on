@@ -11,9 +11,10 @@ class PagesController < ApplicationController
   end
 
   def plan
+    @containers = Container.all
+    @cards = Card.all
   end
 
   def profile
-    @profile_traits = current_user.profile_traits
   end
 end
