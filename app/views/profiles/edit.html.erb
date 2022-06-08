@@ -1,0 +1,18 @@
+<div class="container py-5">
+  <div class="row justify-content-center">
+    <div class="col-12 rounded justify-content-center d-flex">
+      <div class="bg-white col-4 col-md-6 col-lg-6 p-3 shadow">
+        <h2>Your profile:</h2>
+        <div>
+          <%= simple_form_for current_user, url: profiles_path(current_user), method: :patch do |f| %>
+            <%= f.simple_fields_for :profile_traits do |profile_trait| %>
+              <%= profile_trait.input :user_answer, label: profile_trait.object.trait.name, as: :numeric %>
+            <% end %>
+            <%= f.submit "Update", class: "btn btn-primary"%>
+          <% end %>
+        </div>
+      </div>
+      <div class="col-8 roda-da-vida"></div>
+    </div>
+  </div>
+</div>

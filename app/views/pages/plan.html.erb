@@ -1,11 +1,35 @@
 <h1>Planner</h1>
-<% @containers = Container.all %>
 
-<div class="row row-cols-2 row-cols-sm-3 row-cols-md-4 row-cols-lg-4 m-4 d-flex justify-content-around">
-        <% @containers.each do |container| %>
-          <h3>
-            <%= container.card_category %>
-          </h3>
-          <%# <%= render "container-box", container: container %> %>
-        <% end %>
+<div class="kanban" data-controller="kanban">
+  <% @containers.each do |container| %>
+    <ul>
+      <li class="kanban-col-name">
+        <%= container.card_category %>
+      </li>
+    </ul>
+    <ul class="kanban-col" data-kanban-target="card">
+
+      <% container.cards.order(:position).each do |card| %>
+        <li class="kanban-col-item" >
+          <%= card.title %>
+          <%= card.description %>
+        </li>
+      <% end %>
+
+    </ul>
+  <% end %>
+</div>
+
+
+<%# <div class="row row-cols-2 row-cols-sm-3 row-cols-md-4 row-cols-lg-4 m-4 d-flex justify-content-between">
+  <div class="kanban">
+    <div class="kanban-container">
+      <div class="container-title">Um container</div>
+      <div class="container-items">
+        <div class="kanban-item-input">item 1</div>
+        <div class="kanban-item-input">item 2</div>
+      </div>
+      <a href="" class="container-add-items">Botão</a>
     </div>
+  </div>
+</div> %>
