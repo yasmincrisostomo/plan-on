@@ -1,101 +1,8 @@
-// HEADER
-
-.masthead {
-  padding: 3rem 0 7rem;
-  position: relative;
+// BANNER:
+#dashboard {
+  padding: 50px;
   background: rgb(109,91,152);
-  background: radial-gradient(circle, rgba(109,91,152,1) 0%, rgba(121,129,168,1) 51%, rgba(157,119,155,1) 100%);
-  z-index: 0
-}
-
-.masthead svg.wave {
-  position: absolute;
-  bottom: -1px;
-  left: 0
-}
-
-.masthead h1 {
-  color: #fff;
-  font-weight: 700;
-  font-size: 2rem;
-  line-height: 1.1;
-  z-index: 1
-}
-
-.masthead h2 {
-  color: rgba(255, 255, 255, .6);
-  font-weight: 600;
-  z-index: 1;
-  font-size: 1.2rem
-}
-
-.masthead a {
-  color: rgba(255, 255, 255, .8);
-  text-decoration: underline;
-  z-index: 1
-}
-
-.masthead a:active {
-  text-decoration: none
-}
-
-@media(min-width:992px) {
-  .masthead h1 {
-    font-size: 3rem
-  }
-  .masthead h2 {
-    font-size: 1.5rem
-  }
-}
-
-.masthead .masthead-cards {
-  position: relative;
-  z-index: 1;
-}
-
-.masthead .masthead-cards .shape {
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  background-color: rgba(255, 255, 255, .3);
-  top: 0;
-  left: 0;
-  z-index: -1;
-  border-radius: 30% 70% 70% 30%/30% 30% 70% 70%
-}
-
-.masthead .masthead-cards .card {
-  opacity: 1;
-  font-size: .8rem;
-  text-transform: uppercase;
-  font-weight: 800;
-  letter-spacing: .05rem;
-  color: #212529;
-  transition: .15s all;
-}
-
-.masthead .masthead-cards .card:hover {
-  margin-top: -.25rem;
-  margin-bottom: .25rem
-}
-
-.masthead .masthead-cards .card:active {
-  margin-top: inherit;
-  margin-bottom: inherit
-}
-
-.masthead .masthead-cards .card.border-bottom:hover {
-  color: $purple
-}
-
-@media(min-width:992px) {
-  .masthead-page h1 {
-    font-size: 2.5rem
-  }
-}
-
-.shadow-lg {
-  box-shadow: 0 2rem 1.5rem -1.5rem rgba(33,37,41,.15),0 0 1.5rem .5rem rgba(33,37,41,.05)!important;
+  background: linear-gradient(90deg, rgba(109,91,152,1) 0%, rgba(121,129,168,1) 68%, rgba(157,119,155,1) 100%);
 }
 
 // CARDS:
@@ -106,7 +13,17 @@
 
 .card {
   border: none;
-  border-radius: 10px
+  border-radius: 10px;
+  height: 100%;
+  gap: 15px;
+
+  h6 {
+    color: $purple;
+  }
+
+  p, li {
+    color: rgb(131, 131, 131);
+  }
 }
 
 .card:hover {
@@ -116,7 +33,7 @@
 .icon {
   width: 40px;
   height: 40px;
-  background-color: #eee;
+  color: $purple;
   border-radius: 15px;
   display: flex;
   align-items: center;
@@ -126,7 +43,7 @@
 
 .badge span {
   background-color: $baby-purple;
-  width: 85px;
+  width: 100px;
   height: 25px;
   padding-bottom: 3px;
   border-radius: 5px;
@@ -136,3 +53,11 @@
   align-items: center
 }
 
+.heading {
+  font-size: 20px;
+}
+
+hr {
+  border: 1px solid #f3f3f3;
+  opacity: 1.0;
+}

@@ -1,5 +1,104 @@
-// Container Text of Introdution of Plan ON
+// HEADER
 
+.masthead {
+  padding: 3rem 0 7rem;
+  position: relative;
+  background: rgb(109,91,152);
+  background: radial-gradient(circle, rgba(109,91,152,1) 0%, rgba(121,129,168,1) 51%, rgba(157,119,155,1) 100%);
+  z-index: 0
+}
+
+.masthead svg.wave {
+  position: absolute;
+  bottom: -1px;
+  left: 0
+}
+
+.masthead h1 {
+  color: #fff;
+  font-weight: 700;
+  font-size: 2rem;
+  line-height: 1.1;
+  z-index: 1
+}
+
+.masthead h2 {
+  color: rgba(255, 255, 255, .6);
+  font-weight: 600;
+  z-index: 1;
+  font-size: 1.2rem
+}
+
+.masthead a {
+  color: rgba(255, 255, 255, .8);
+  text-decoration: underline;
+  z-index: 1
+}
+
+.masthead a:active {
+  text-decoration: none
+}
+
+@media(min-width:992px) {
+  .masthead h1 {
+    font-size: 3rem
+  }
+  .masthead h2 {
+    font-size: 1.5rem
+  }
+}
+
+.masthead .masthead-cards {
+  position: relative;
+  z-index: 1;
+}
+
+.masthead .masthead-cards .shape {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(255, 255, 255, .3);
+  top: 0;
+  left: 0;
+  z-index: -1;
+  border-radius: 30% 70% 70% 30%/30% 30% 70% 70%
+}
+
+.masthead .masthead-cards .card {
+  opacity: 1;
+  font-size: .8rem;
+  text-transform: uppercase;
+  font-weight: 800;
+  letter-spacing: .05rem;
+  color: #212529;
+  transition: .15s all;
+}
+
+.masthead .masthead-cards .card:hover {
+  margin-top: -.25rem;
+  margin-bottom: .25rem
+}
+
+.masthead .masthead-cards .card:active {
+  margin-top: inherit;
+  margin-bottom: inherit
+}
+
+.masthead .masthead-cards .card.border-bottom:hover {
+  color: $purple
+}
+
+@media(min-width:992px) {
+  .masthead-page h1 {
+    font-size: 2.5rem
+  }
+}
+
+.shadow-lg {
+  box-shadow: 0 2rem 1.5rem -1.5rem rgba(33,37,41,.15),0 0 1.5rem .5rem rgba(33,37,41,.05)!important;
+}
+
+// Container Text of Introdution of Plan ON
 
 .principal-text {
   height: 50vh;
@@ -7,39 +106,11 @@
 
 .title-planon {
   text-align: center;
-
 }
-
-
 
 .text-planon {
   text-align: justify ;
 }
-
-// .cards {
-//   display: grid;
-//   grid-template-columns: 1fr 1fr 1fr;
-//   grid-gap: 16px;
-// }
-
-// .card-category {
-//   background-size: cover;
-//   background-position: center;
-//   height: 180px;
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-//   color: white;
-//   font-size: 24px;
-//   font-weight: bold;
-//   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-//   border-radius: 5px;
-//   box-shadow: 0 0 15px rgba(0,0,0,0.2);
-// }
-
-
-
-
 
 // Smallest device
 @media (min-width: 100px) and (max-width: 575px) {
@@ -98,7 +169,7 @@
 
 .container-benefits .card .face.face1{
   position: relative;
-  background: #333;
+  background: $purple;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -107,7 +178,7 @@
 }
 
 .container-benefits .card:hover .face.face1{
-  background: #ff0057;
+  background: $light-purple;
   transform: translateY(0);
 }
 
