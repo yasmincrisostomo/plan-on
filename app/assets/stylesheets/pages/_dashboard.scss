@@ -1,45 +1,4 @@
-.dash-banner {
-  background: rgb(109,91,152);
-  background: radial-gradient(circle, rgba(109,91,152,1) 0%, rgba(121,129,168,1) 51%, rgba(157,119,155,1) 100%);
-  color: #fff;
-  height: 200px;
-  font-size: 50px;
-  display: grid;
-  place-items: center;
-}
-
-.card {
-  border: none;
-  border-radius: 10px
-}
-
-.c-details span {
-  font-weight: 300;
-  font-size: 13px
-}
-
-.icon {
-  width: 50px;
-  height: 50px;
-  background-color: #eee;
-  border-radius: 15px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 39px
-}
-
-.badge span {
-  background-color: $baby-purple;
-  width: 85px;
-  height: 25px;
-  padding-bottom: 3px;
-  border-radius: 5px;
-  display: flex;
-  color: white;
-  justify-content: center;
-  align-items: center
-}
+// HEADER
 
 .masthead {
   padding: 3rem 0 7rem;
@@ -76,26 +35,22 @@
   z-index: 1
 }
 
-.masthead a:hover {
-  color: #fff
-}
-
 .masthead a:active {
   text-decoration: none
 }
 
 @media(min-width:992px) {
   .masthead h1 {
-      font-size: 3rem
+    font-size: 3rem
   }
   .masthead h2 {
-      font-size: 1.5rem
+    font-size: 1.5rem
   }
 }
 
 .masthead .masthead-cards {
   position: relative;
-  z-index: 1
+  z-index: 1;
 }
 
 .masthead .masthead-cards .shape {
@@ -116,7 +71,7 @@
   font-weight: 800;
   letter-spacing: .05rem;
   color: #212529;
-  transition: .15s all
+  transition: .15s all;
 }
 
 .masthead .masthead-cards .card:hover {
@@ -129,54 +84,54 @@
   margin-bottom: inherit
 }
 
-.masthead .masthead-cards .card.border-bottom-blue:hover {
-  color: #2092ed
-}
-
-.masthead .masthead-cards .card.border-bottom-green:hover {
-  color: #28a745
-}
-
-.masthead .masthead-cards .card.border-bottom-red:hover {
-  color: #dd3d31
-}
-
-.masthead .masthead-cards .card.border-bottom-yellow:hover {
-  color: #ffc107
-}
-
-.masthead-page {
-  padding: 1rem 0 4rem
+.masthead .masthead-cards .card.border-bottom:hover {
+  color: $purple
 }
 
 @media(min-width:992px) {
   .masthead-page h1 {
-      font-size: 2.5rem
+    font-size: 2.5rem
   }
 }
 
-.border-bottom-yellow {
-  border-color: #ffc107!important;
-}
-
-.border-bottom-red {
-  border-color: #dd3d31!important;
-}
-
-.border-bottom-blue {
-  border-color: #2092ed!important;
-}
-
-.border-bottom-green {
-  border-color: #28a745!important;
-}
-
-.border-bottom-blue, .border-bottom-green, .border-bottom-red, .border-bottom-yellow {
-  border-bottom: .4rem solid!important;
-}
 .shadow-lg {
   box-shadow: 0 2rem 1.5rem -1.5rem rgba(33,37,41,.15),0 0 1.5rem .5rem rgba(33,37,41,.05)!important;
 }
+
+// CARDS:
+
 .border-0 {
   border: 0!important;
+}
+
+.card {
+  border: none;
+  border-radius: 10px
+}
+
+.card:hover {
+  transform: scale(1.02);
+}
+
+.icon {
+  width: 40px;
+  height: 40px;
+  background-color: #eee;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px
+}
+
+.badge span {
+  background-color: $baby-purple;
+  width: 85px;
+  height: 25px;
+  padding-bottom: 3px;
+  border-radius: 5px;
+  display: flex;
+  color: white;
+  justify-content: center;
+  align-items: center
 }
