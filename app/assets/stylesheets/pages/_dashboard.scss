@@ -1,51 +1,137 @@
-.dash-banner {
+// HEADER
+
+.masthead {
+  padding: 3rem 0 7rem;
+  position: relative;
   background: rgb(109,91,152);
   background: radial-gradient(circle, rgba(109,91,152,1) 0%, rgba(121,129,168,1) 51%, rgba(157,119,155,1) 100%);
+  z-index: 0
+}
+
+.masthead svg.wave {
+  position: absolute;
+  bottom: -1px;
+  left: 0
+}
+
+.masthead h1 {
   color: #fff;
-  height: 200px;
-  font-size: 50px;
-  display: grid;
-  place-items: center;
+  font-weight: 700;
+  font-size: 2rem;
+  line-height: 1.1;
+  z-index: 1
 }
 
-.cards {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 16px;
-  height: 350px;
+.masthead h2 {
+  color: rgba(255, 255, 255, .6);
+  font-weight: 600;
+  z-index: 1;
+  font-size: 1.2rem
 }
 
-// Smallest device
-@media (min-width: 100px) and (max-width: 575px) {
-  .cards {
-    grid-template-columns: 1fr;
+.masthead a {
+  color: rgba(255, 255, 255, .8);
+  text-decoration: underline;
+  z-index: 1
+}
+
+.masthead a:active {
+  text-decoration: none
+}
+
+@media(min-width:992px) {
+  .masthead h1 {
+    font-size: 3rem
+  }
+  .masthead h2 {
+    font-size: 1.5rem
   }
 }
 
-// Small devices (landscape phones, 576px and up)
-@media (min-width: 576px) {
-  .cards {
-    grid-template-columns: 1fr;
+.masthead .masthead-cards {
+  position: relative;
+  z-index: 1;
+}
+
+.masthead .masthead-cards .shape {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(255, 255, 255, .3);
+  top: 0;
+  left: 0;
+  z-index: -1;
+  border-radius: 30% 70% 70% 30%/30% 30% 70% 70%
+}
+
+.masthead .masthead-cards .card {
+  opacity: 1;
+  font-size: .8rem;
+  text-transform: uppercase;
+  font-weight: 800;
+  letter-spacing: .05rem;
+  color: #212529;
+  transition: .15s all;
+}
+
+.masthead .masthead-cards .card:hover {
+  margin-top: -.25rem;
+  margin-bottom: .25rem
+}
+
+.masthead .masthead-cards .card:active {
+  margin-top: inherit;
+  margin-bottom: inherit
+}
+
+.masthead .masthead-cards .card.border-bottom:hover {
+  color: $purple
+}
+
+@media(min-width:992px) {
+  .masthead-page h1 {
+    font-size: 2.5rem
   }
 }
 
-// Medium devices (tablets, 768px and up)
-@media (min-width: 768px) {
-  .cards {
-    grid-template-columns: 1fr 1fr;
-  }
+.shadow-lg {
+  box-shadow: 0 2rem 1.5rem -1.5rem rgba(33,37,41,.15),0 0 1.5rem .5rem rgba(33,37,41,.05)!important;
 }
 
-// Large devices (desktops, 992px and up)
-@media (min-width: 992px) {
-  .cards {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
+// CARDS:
+
+.border-0 {
+  border: 0!important;
 }
 
-// Extra large devices (large desktops, 1200px and up)
-@media (min-width: 1200px) {
-  .cards {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
+.card {
+  border: none;
+  border-radius: 10px
+}
+
+.card:hover {
+  transform: scale(1.02);
+}
+
+.icon {
+  width: 40px;
+  height: 40px;
+  background-color: #eee;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px
+}
+
+.badge span {
+  background-color: $baby-purple;
+  width: 85px;
+  height: 25px;
+  padding-bottom: 3px;
+  border-radius: 5px;
+  display: flex;
+  color: white;
+  justify-content: center;
+  align-items: center
 }
