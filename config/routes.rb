@@ -12,7 +12,10 @@ Rails.application.routes.draw do
 
   resources :containers, only: :destroy
   resources :tags, only: %i[destroy edit update]
+
   resources :schedules
+
+  resources :pomodoros, only: %i[index]
 
   get "dashboard", to: "pages#dashboard", as: "dashboard"
   get "about", to: "pages#about", as: "about"
