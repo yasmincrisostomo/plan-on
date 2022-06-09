@@ -1,0 +1,15 @@
+<h1>schedules</h1>
+
+
+<%= link_to "add date", new_schedule_path %>
+
+<%= month_calendar(events: @schedules, attribute: :date) do |date, schedules| %>
+  <%= date %>
+  <ul>
+    <% schedules.each do |schedule| %>
+      <li>
+        <%= schedule.title %>
+      </li>
+    <% end %>
+  </ul>
+<% end %>
