@@ -1,0 +1,8 @@
+.btn-purple {
+  background-color: $purple;
+  color: white;
+  &:hover {
+    background-color: $light-purple;
+    color: white;
+  }
+}

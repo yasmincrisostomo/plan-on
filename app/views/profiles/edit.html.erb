@@ -1,18 +1,22 @@
 <div class="container py-5">
   <div class="row justify-content-center">
-    <div class="col-12 rounded justify-content-center d-flex">
-      <div class="bg-white col-4 col-md-6 col-lg-6 p-3 shadow">
-        <h2>Your profile:</h2>
+      <div class="profile-form bg-white col-8 col-md-6 col-lg-6 p-3 shadow d-flex flex-column align-items-center">
+        <h2>Wheel of Life</h2>
         <div>
           <%= simple_form_for current_user, url: profiles_path(current_user), method: :patch do |f| %>
             <%= f.simple_fields_for :profile_traits do |profile_trait| %>
-              <%= profile_trait.input :user_answer, label: profile_trait.object.trait.name, as: :numeric %>
+              <%= profile_trait.input :user_answer,
+                                      input_html: { min: 1, max: 10, class: 'category-selector' },
+                                      label: profile_trait.object.trait.name,
+                                      as: :radio_buttons, collection: (0..10),
+                                      collection_wrapper_tag: 'div',
+                                      collection_wrapper_class: 'd-flex',
+                                      item_wrapper_class: 'category-item' %>
             <% end %>
-            <%= f.submit "Update", class: "btn btn-primary"%>
+            <%= f.submit "Update", class: "btn btn-purple rounded-pill"%>
           <% end %>
         </div>
       </div>
-      <div class="col-8 roda-da-vida"></div>
-    </div>
+      <div class="col-4 roda-da-vida"></div>
   </div>
 </div>
