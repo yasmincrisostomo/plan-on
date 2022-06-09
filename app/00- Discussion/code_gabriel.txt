@@ -1,0 +1,5 @@
+a) Tentar outro caminho de calendário icalendar
+
+- baixei a gema icalendar e depois dei um bundle e um yarn
+- No routes, gerei um rota com source calendar
+- No terminal, gerei
