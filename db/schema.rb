@@ -43,16 +43,6 @@ ActiveRecord::Schema.define(version: 2022_06_09_214316) do
     t.index ["blob_id", "variation_digest"], name: "index_active_storage_variant_records_uniqueness", unique: true
   end
 
-  create_table "calendars", force: :cascade do |t|
-    t.string "name"
-    t.datetime "start_time"
-    t.datetime "end_time"
-    t.bigint "user_id", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["user_id"], name: "index_calendars_on_user_id"
-  end
-
   create_table "cards", force: :cascade do |t|
     t.string "title"
     t.text "description"
@@ -69,21 +59,6 @@ ActiveRecord::Schema.define(version: 2022_06_09_214316) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["user_id"], name: "index_containers_on_user_id"
-  end
-
-  create_table "meeting_events", force: :cascade do |t|
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
-  create_table "meetings", force: :cascade do |t|
-    t.string "name"
-    t.datetime "start_time"
-    t.datetime "end_time"
-    t.bigint "user_id", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["user_id"], name: "index_meetings_on_user_id"
   end
 
   create_table "pomodoros", force: :cascade do |t|
@@ -146,10 +121,8 @@ ActiveRecord::Schema.define(version: 2022_06_09_214316) do
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
-  add_foreign_key "calendars", "users"
   add_foreign_key "cards", "containers"
   add_foreign_key "containers", "users"
-  add_foreign_key "meetings", "users"
   add_foreign_key "pomodoros", "users"
   add_foreign_key "profile_traits", "traits"
   add_foreign_key "profile_traits", "users"

@@ -17,7 +17,7 @@
                   <div class="text-center">
                     <i class="fa fa-pencil fa-4x my-2"></i>
                   </div>
-                  Determine
+                  <p>Determine</p>
                 </div>
               </div>
             </a>
@@ -27,7 +27,7 @@
                 <div class="text-center">
                   <i class="fas fa-sort-amount-up fa-4x my-2"></i>
                 </div>
-                Prioritize
+                <p>Prioritize</p>
               </div>
             </div>
             </a>
@@ -39,7 +39,7 @@
                   <div class="text-center">
                     <i class="fas fa-clipboard-list fa-4x my-2"></i>
                   </div>
-                  Develop
+                  <p>Develop</p>
                 </div>
               </div>
             </a>
@@ -49,7 +49,7 @@
                   <div class="text-center">
                     <i class="fas fa-clipboard-check fa-4x my-2"></i>
                   </div>
-                  Execute
+                  <p>Execute</p>
                 </div>
               </div>
             </a>
@@ -81,14 +81,20 @@
           <h3 class="heading">This week you need to work on:</h3>
           <hr>
           <div class="mt-2">
-            <ul>
-              <%  @profile_traits.each do |profiles_trait| %>
-                <li><%= profiles_trait.trait.name %></li>
-                <p><%= profiles_trait.trait.message %></p>
-              <% end %>
-            </ul>
+            <% if @profile_traits_empty %>
+              <p>The Wheel of Life is a simple but powerful tool that helps you visualize all the important areas of your life at once. It is often used by life coaches and career coaches to give their clients a "bird's eye" view of their lives.
+               By looking at a visual representation of all the areas of your life at once, the wheel helps you to better understand which of your life areas are flourishing and which ones need the most work.</p>
+               <%= link_to "Wheel of life", edit_profiles_path, class: "btn btn-purple rounded-pill" %>
+            <% else %>
+              <ul>
+                <%  @profile_traits.each do |profiles_trait| %>
+                  <li><%= profiles_trait.trait.name %></li>
+                  <p><%= profiles_trait.trait.message %></p>
+                <% end %>
+              </ul>
+            <% end %>
           </div>
-          </div>
+        </div>
       </div>
     </div>
     <div class="col-md-4">
@@ -127,7 +133,7 @@
             <hr>
             <div class="mt-2">
               <p>The Pomodoro Technique is created by Francesco Cirillo for a more productive way to work and study.
-               The technique uses a timer to break down work into intervals.</p>
+               The technique uses a timer to break down work into intervals. Get a to-do list and a timer. Set your timer for 25 minutes, and focus on a single task until the timer rings. When your session ends, mark off one pomodoro and record what you completed. Then enjoy a five-minute break. After four pomodoros, take a longer, more restorative 15-30 minute break.</p>
               <%= link_to "Pomodoro", pomodoros_path, class: "btn btn-purple rounded-pill" %>
             </div>
           </div>
