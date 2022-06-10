@@ -1,7 +1,3 @@
-<h1>Planejamento de camadas</h1>
-
-
-
 <div class="kanban" data-controller="kanban">
 
   <% @containers.each do |container| %>
@@ -27,8 +23,8 @@
       </ul>
 
       <li>
-        <%= link_to "+ Add", new_container_card_path(container), class: "btn-purple btn mb-1" %>
-        <%= link_to "Delete Container", container, method: :delete, class: "btn-warning btn" %>
+        <%= link_to "+ Add", new_container_card_path(container), class: "btn btn-purple" %>
+        <%= link_to "Delete", container, method: :delete, class: "btn btn-purple" %>
       </li>
     </div>
   <% end %>
