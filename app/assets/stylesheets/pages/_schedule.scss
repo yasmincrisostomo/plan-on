@@ -1,9 +1,3 @@
-// first change caledar
-
-// .container {
-//   display: grid;
-
-// }
 
 .text_title_schedules {
   text-align: center;
@@ -60,4 +54,11 @@
 
 .simple-calendar td {
   border:1px solid #9D779B;
+    li {
+      list-style-type: none;
+      background: pink;
+      display: inline-block;
+      margin:4px;
+
+    }
 }
