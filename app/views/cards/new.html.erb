@@ -1,2 +1,11 @@
-<h1>Cards#new</h1>
-<p>Find me in app/views/cards/new.html.erb</p>
+<h1>Create card</h1>
+
+
+<%# <%= simple_form_for container_card_path do |f| %> %>
+
+<%= simple_form_for [@container, @card] do |f| %>
+  <%= f.input :title %>
+  <%= f.input :description %>
+  <%= f.input :position %>
+  <%= f.button :submit %>
+<% end %>

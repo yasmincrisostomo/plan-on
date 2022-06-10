@@ -2,12 +2,14 @@ class CardsController < ApplicationController
   before_action :set_card, only: %i[show edit update destroy]
 
   def new
+    @container = Container.find(params[:container_id])
     @card = Card.new
   end
 
   def create
+    @container = Container.find(params[:container_id])
     @card = Card.new(card_params)
-    @card.user = current_user
+    @card.container = @container
 
     if @card.save
       redirect_to plan_path
@@ -40,6 +42,7 @@ class CardsController < ApplicationController
   def set_card
     @card = Card.find(params[:id])
   end
+
 
   def card_params
     params.require(:card).permit(:title, :description)
