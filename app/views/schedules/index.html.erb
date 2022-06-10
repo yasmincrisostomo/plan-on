@@ -1,11 +1,7 @@
-<div class= "container col-8">
+<div class="container col-8 text-center">
   <section>
-    <div class= "text_title_schedules">
-      <h1>SCHEDULES</h1>
-    </div>
-
-    <div class= "btn-date">
-      <%= link_to "Add date", new_schedule_path %>
+    <div class="text_title_schedules">
+      <h1>SCHEDULE</h1>
     </div>
   </section>
 
@@ -19,4 +15,8 @@
       <% end %>
     </ul>
   <% end %>
+
+   <div>
+      <%= link_to "Add an event", new_schedule_path, class: "btn btn-purple rounded-pill mt-3 mb-5" %>
+    </div>
 </div>
