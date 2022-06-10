@@ -1,6 +1,7 @@
 <h1>Planejamento de camadas</h1>
 
 
+
 <div class="kanban" data-controller="kanban">
 
   <% @containers.each do |container| %>
@@ -9,7 +10,6 @@
         <%= container.card_category %>
       </li>
 
-<%# CARDS iteration %>
       <ul class="kanban-col" data-kanban-target="container" data-container-id="<%= container.id %>">
         <% container.cards.order(:position).each do |card| %>
           <%# card %>
@@ -25,4 +25,5 @@
       </li>
     </div>
   <% end %>
+  <%= link_to "New Container", new_container_path, class: "kanban-col-name" %>
 </div>
