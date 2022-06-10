@@ -13,7 +13,7 @@ Rails.application.routes.draw do
   resources :containers, only: :destroy
   resources :tags, only: %i[destroy edit update]
 
-  resources :schedules
+  resources :schedules, as: "schedules"
 
   resources :pomodoros, only: %i[index]
 
@@ -21,7 +21,5 @@ Rails.application.routes.draw do
   get "about", to: "pages#about", as: "about"
   get "plan", to: "pages#plan", as: "plan"
   get "profile", to: "pages#profile", as: "profile"
-  # gabriel criou root schedule tirar dúvida com T.A depois
-
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
