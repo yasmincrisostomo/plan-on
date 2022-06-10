@@ -7,9 +7,17 @@
 @import "bootstrap/scss/bootstrap";
 @import "font-awesome-sprockets";
 @import "font-awesome";
+@import "simple_calendar";
 
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
 @import "pages/home";
-@import "pages/plan";
+@import "pages/schedule";
+@import "pages/pomodoro";
+
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}

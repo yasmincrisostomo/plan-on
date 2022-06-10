@@ -6,6 +6,8 @@ class PagesController < ApplicationController
   end
 
   def dashboard
+    @profile_traits = current_user.profile_traits.order(:user_answer).first(4)
+    @profile_traits_empty = @profile_traits.pluck(:user_answer).all?("0")
   end
 
   def about
@@ -34,6 +36,5 @@ class PagesController < ApplicationController
   end
 
   def profile
-    @profile_traits = current_user.profile_traits
   end
 end

@@ -1,0 +1,9 @@
+<div class="d-flex justify-content-center w-100 mt-4">
+  <div data-controller="chart" data-chart-values-value='<%= @hash.to_json %>' class="w-50">
+    <canvas data-chart-target="canvas"></canvas>
+    <div class="buttons my-3">
+      <%= link_to "Edit", edit_profiles_path, class: "btn btn-purple rounded-pill" %>
+      <%= button_tag "Download", data: {chart_target: "button"}, class: "btn btn-purple rounded-pill mx-2" %>
+    </div>
+  </div>
+</div>

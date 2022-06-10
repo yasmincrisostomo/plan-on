@@ -1,0 +1,41 @@
+.footer-dark {
+  padding: 40px 0;
+  color: #B1D0E0;
+  background-color: $purple;
+  margin-top: auto;
+}
+
+.footer-dark .item.text p {
+  opacity: 0.6;
+  margin-bottom: 0;
+}
+
+.footer-dark .item.social {
+  text-align: center;
+}
+
+.footer-dark .item.social > a {
+  font-size:20px;
+  width:36px;
+  height:36px;
+  line-height:36px;
+  display:inline-block;
+  text-align:center;
+  border-radius:50%;
+  box-shadow:0 0 0 1px rgba(255,255,255,0.4);
+  margin:0 8px;
+  color: $baby-purple;
+}
+
+.footer-dark .item.social > a:hover {
+  opacity:0.9;
+  color: $light-purple;
+}
+
+.footer-dark .copyright {
+  text-align:center;
+  padding-top:24px;
+  opacity:0.3;
+  font-size:13px;
+  margin-bottom:0;
+}

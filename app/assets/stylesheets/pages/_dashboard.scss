@@ -1,0 +1,63 @@
+// BANNER:
+#dashboard {
+  padding: 40px;
+  background: rgb(109,91,152);
+  background: linear-gradient(90deg, rgba(109,91,152,1) 0%, rgba(121,129,168,1) 68%, rgba(157,119,155,1) 100%);
+}
+
+// CARDS:
+
+.border-0 {
+  border: 0!important;
+}
+
+.card {
+  border: none;
+  border-radius: 10px;
+  height: 100%;
+  gap: 15px;
+
+  h6 {
+    color: $purple;
+  }
+
+  p, li {
+    color: rgb(131, 131, 131);
+  }
+}
+
+.card:hover {
+  transform: scale(1.02);
+}
+
+.icon {
+  width: 40px;
+  height: 40px;
+  color: $purple;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px
+}
+
+.badge span {
+  background-color: $baby-purple;
+  width: 100px;
+  height: 25px;
+  padding-bottom: 3px;
+  border-radius: 5px;
+  display: flex;
+  color: white;
+  justify-content: center;
+  align-items: center
+}
+
+.heading {
+  font-size: 20px;
+}
+
+hr {
+  border: 1px solid #f3f3f3;
+  opacity: 1.0;
+}

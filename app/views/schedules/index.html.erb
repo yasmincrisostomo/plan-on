@@ -1,0 +1,22 @@
+<div class= "container col-8">
+  <section>
+    <div class= "text_title_schedules">
+      <h1>SCHEDULES</h1>
+    </div>
+
+    <div class= "btn-date">
+      <%= link_to "Add date", new_schedule_path %>
+    </div>
+  </section>
+
+  <%= month_calendar(events: @schedules, attribute: :date) do |date, schedules| %>
+    <%= date.strftime('%d') %>
+    <ul>
+      <% schedules.each do |schedule| %>
+        <li>
+          <%= schedule.title %>
+        </li>
+      <% end %>
+    </ul>
+  <% end %>
+</div>
