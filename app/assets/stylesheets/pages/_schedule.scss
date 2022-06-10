@@ -1,5 +1,9 @@
 // first change caledar
 
+// .container {
+//   display: grid;
+
+// }
 
 .text_title_schedules {
   text-align: center;
@@ -25,48 +29,35 @@
     }
   }
 
-  .calendar-heading {
+  // li {
+  //   list-style-type: none;
+  //   background: green;
+  // }
+
+.calendar-heading {
     text-align: center;
     margin-bottom: 7px;
       a{
         text-decoration: none;
-        color: #6D5B98;
+        color: #9D779B;;
       }
+}
 
-  }
 
-.simple-calendar th {
+
+
+.simple-calendar th  {
   padding: 15px;
-  background: rgb(99, 82, 136);
-  border-bottom: 2px solid pink;
+  background: #9D779B;;
+  border-bottom: 2px solid ;
   border-collapse: collapse;
-  border-left: 1px solid pink;
-  border-right: 1px solid pink;
-  border-top: 0px none pink;
+  border-left: 1px solid #9D779B;
+  border-right: 1px solid #9D779B;
+  border-top: 0px none #9D779B;
   box-sizing: border-box;
   text-align: center;
 }
 
-.boder{
-  color: red;
-}
-
-
-.badge {
-
-  background-color: #9D779B;
-  color: white;
-  width: 100px;
-  height: 25px;
-  padding-bottom: 3px;
-  border-radius: 5px;
-  display: flex;
-  color: white;
-  justify-content: center;
-  align-items: center;
-}
-
-.badge a{
-  color: white;
-  text-decoration: none;
+.simple-calendar td {
+  border:1px solid #9D779B;
 }
