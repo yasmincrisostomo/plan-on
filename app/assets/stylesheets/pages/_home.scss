@@ -1,5 +1,4 @@
 // HEADER
-
 .masthead {
   padding: 3rem 0 7rem;
   position: relative;
@@ -33,6 +32,10 @@
   color: rgba(255, 255, 255, .8);
   text-decoration: underline;
   z-index: 1
+}
+
+.masthead p {
+  color: $purple;
 }
 
 .masthead a:active {
@@ -84,8 +87,12 @@
   margin-bottom: inherit
 }
 
+.masthead .masthead-cards .card.border-bottom {
+  color: $purple;
+}
+
 .masthead .masthead-cards .card.border-bottom:hover {
-  color: $purple
+  color: $light-purple;
 }
 
 @media(min-width:992px) {
