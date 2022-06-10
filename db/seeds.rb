@@ -14,6 +14,7 @@ Trait.create!(name: "Rest", message: "Melhore!")
 
 Trait.create!(name: "Emotional balance", message: "Melhore!")
 
+
 Trait.create!(name: "Material quality", message: "Melhore!")
 
 user = User.create!(email: 'alguem@email.com', password: '123123', name: 'Alguem', type_of_student: 'Folgado')

@@ -6,6 +6,12 @@ class ContainersController < ApplicationController
   def create
     @container = Container.new(container_params)
     @container.user = current_user
+
+    if @container.save
+      redirect_to plan_path
+    else
+      render :new
+    end
   end
 
   def edit
@@ -16,7 +22,9 @@ class ContainersController < ApplicationController
   end
 
   def destroy
+    @container = Container.find(params[:id])
     @container.destroy
+    redirect_to plan_path
   end
 
   private
