@@ -81,26 +81,20 @@
           <h3 class="heading">This week you need to work on:</h3>
           <hr>
           <div class="mt-2">
-
-<%# AJUDAAAAAA %>
-
-          <% @profile_traits.each do |profiles_trait| %>
-            <% if profiles_trait.user_answer.empty? %>
-               <p>The Wheel of Life is a simple but powerful tool that helps you visualize all the important areas of your life at once.
-               It is often used by life coaches and career coaches to give their clients a "bird's eye" view of their lives.
+            <% if @profile_traits_empty %>
+              <p>The Wheel of Life is a simple but powerful tool that helps you visualize all the important areas of your life at once. It is often used by life coaches and career coaches to give their clients a "bird's eye" view of their lives.
                By looking at a visual representation of all the areas of your life at once, the wheel helps you to better understand which of your life areas are flourishing and which ones need the most work.</p>
-              <%= link_to "Wheel of life", edit_profiles_path, class: "btn btn-purple rounded-pill" %>
+               <%= link_to "Wheel of life", edit_profiles_path, class: "btn btn-purple rounded-pill" %>
+            <% else %>
+              <ul>
+                <%  @profile_traits.each do |profiles_trait| %>
+                  <li><%= profiles_trait.trait.name %></li>
+                  <p><%= profiles_trait.trait.message %></p>
+                <% end %>
+              </ul>
             <% end %>
-          <% end %>
-
-            <ul>
-              <%  @profile_traits.each do |profiles_trait| %>
-                <li><%= profiles_trait.trait.name %></li>
-                <p><%= profiles_trait.trait.message %></p>
-              <% end %>
-            </ul>
           </div>
-          </div>
+        </div>
       </div>
     </div>
     <div class="col-md-4">
@@ -139,7 +133,7 @@
             <hr>
             <div class="mt-2">
               <p>The Pomodoro Technique is created by Francesco Cirillo for a more productive way to work and study.
-               The technique uses a timer to break down work into intervals.</p>
+               The technique uses a timer to break down work into intervals. Get a to-do list and a timer. Set your timer for 25 minutes, and focus on a single task until the timer rings. When your session ends, mark off one pomodoro and record what you completed. Then enjoy a five-minute break. After four pomodoros, take a longer, more restorative 15-30 minute break.</p>
               <%= link_to "Pomodoro", pomodoros_path, class: "btn btn-purple rounded-pill" %>
             </div>
           </div>
