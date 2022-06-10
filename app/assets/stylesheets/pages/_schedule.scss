@@ -1,25 +1,72 @@
 // first change caledar
 
-.simple-calendar {
-  .day {}
 
-  .wday-0 {}
-  .wday-1 {}
-  .wday-2 {}
-  .wday-3 {}
-  .wday-4 {}
-  .wday-5 {}
-  .wday-6 {}
+.text_title_schedules {
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 30px;
+  color: #9D779B;
+}
 
-  .today {}
-  .past {}
-  .future {}
+.btn-purple {
+  background-color: #9D779B;
+  width: 100px;
+  height: 30px;
+  padding-bottom: 3px;
+  border-radius: 5px;
+  display: flex;
+  color: white;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 15px;
+    a {
+      text-decoration: none;
+      color: white;
+    }
+  }
 
-  .start-date {}
+  .calendar-heading {
+    text-align: center;
+    margin-bottom: 7px;
+      a{
+        text-decoration: none;
+        color: #6D5B98;
+      }
 
-  .prev-month {}
-  .next-month { }
-  .current-month {}
+  }
 
-  .has-events {}
+.simple-calendar th {
+  padding: 15px;
+  background: rgb(99, 82, 136);
+  border-bottom: 2px solid pink;
+  border-collapse: collapse;
+  border-left: 1px solid pink;
+  border-right: 1px solid pink;
+  border-top: 0px none pink;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.boder{
+  color: red;
+}
+
+
+.badge {
+
+  background-color: #9D779B;
+  color: white;
+  width: 100px;
+  height: 25px;
+  padding-bottom: 3px;
+  border-radius: 5px;
+  display: flex;
+  color: white;
+  justify-content: center;
+  align-items: center;
+}
+
+.badge a{
+  color: white;
+  text-decoration: none;
 }

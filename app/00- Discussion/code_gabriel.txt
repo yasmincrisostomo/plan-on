@@ -1,5 +1,35 @@
-a) Tentar outro caminho de calendário icalendar
 
-- baixei a gema icalendar e depois dei um bundle e um yarn
-- No routes, gerei um rota com source calendar
-- No terminal, gerei
+b-) view de shedule
+
+./view/scheule/index.html.erb
+
+-criei duas tabelas uma com comentarios zoados e outra nao
+
+meu antigo codigo da view:
+
+# <%= link_to "add date", new_schedule_path %>
+
+# <%= month_calendar(events: @schedules, attribute: :date) do |date, schedules| %>
+#   <%= date %>
+#   <ul>
+#     <% schedules.each do |schedule| %>
+#       <li>
+#         <%= schedule.title %>
+#       </li>
+#     <% end %>
+#   </ul>
+# <% end %>
+
+
+
+
+
+
+
+
+
+
+
+c) meche no controller schedulle
+
+- comentei o index
