@@ -7,7 +7,7 @@ b-) view de shedule
 
 meu antigo codigo da view:
 
-# <%= link_to "add date", new_schedule_path %>
+# <%= link_to "Add date", new_schedule_path %>
 
 # <%= month_calendar(events: @schedules, attribute: :date) do |date, schedules| %>
 #   <%= date %>

@@ -4,9 +4,9 @@
       <h1>SCHEDULES</h1>
     </div>
 
-    <div class= "btn-purple">
-      <%= link_to "add date", new_schedule_path %>
-    </div">
+    <div class= "btn-date">
+      <%= link_to "Add date", new_schedule_path %>
+    </div>
   </section>
 
   <%= month_calendar(events: @schedules, attribute: :date) do |date, schedules| %>
