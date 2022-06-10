@@ -22,8 +22,13 @@
 
       <li>
         <%= link_to "+ Add", new_container_card_path(container), class: "btn-primary btn my-0" %>
+        <%= link_to "Delete Container", container, method: :delete, class: "btn-danger btn" %>
       </li>
     </div>
   <% end %>
-  <%= link_to "New Container", new_container_path, class: "kanban-col-name" %>
+
+  <%= simple_form_for @container do |f| %>
+    <%= f.input :card_category %>
+    <%= f.button :submit %>
+  <% end %>
 </div>

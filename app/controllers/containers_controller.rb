@@ -6,6 +6,12 @@ class ContainersController < ApplicationController
   def create
     @container = Container.new(container_params)
     @container.user = current_user
+
+    if @container.save
+      redirect_to plan_path
+    else
+      render :new
+    end
   end
 
   def edit

@@ -14,6 +14,8 @@ class PagesController < ApplicationController
   def plan
     @containers = Container.all
     @cards = Card.all
+
+    @container = Container.new
   end
 
   def update_cards
