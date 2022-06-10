@@ -242,26 +242,22 @@
   color: #fff;
 }
 
-
-
-
-
 // Container-testimoniais
 .container-testimonials {
   background-color:#B773C5;
 }
 
 .testimonial-card .card-up {
-  height: 120px;
+  height: 40px;
   overflow: hidden;
   border-top-left-radius: 0.25rem;
   border-top-right-radius: 0.25rem;
-  }
+}
 
-  .testimonial-card .avatar {
+.testimonial-card .avatar {
   width: 110px;
   margin-top: -60px;
   overflow: hidden;
   border: 3px solid #fff;
   border-radius: 50%;
-  }
+}
