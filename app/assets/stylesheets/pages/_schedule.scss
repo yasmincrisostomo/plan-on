@@ -1,25 +1,64 @@
-// first change caledar
 
-.simple-calendar {
-  .day {}
+.text_title_schedules {
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 30px;
+  color: #9D779B;
+}
 
-  .wday-0 {}
-  .wday-1 {}
-  .wday-2 {}
-  .wday-3 {}
-  .wday-4 {}
-  .wday-5 {}
-  .wday-6 {}
+.btn-purple {
+  background-color: #9D779B;
+  width: 100px;
+  height: 30px;
+  padding-bottom: 3px;
+  border-radius: 5px;
+  display: flex;
+  color: white;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 15px;
+    a {
+      text-decoration: none;
+      color: white;
+    }
+  }
 
-  .today {}
-  .past {}
-  .future {}
+  // li {
+  //   list-style-type: none;
+  //   background: green;
+  // }
 
-  .start-date {}
+.calendar-heading {
+    text-align: center;
+    margin-bottom: 7px;
+      a{
+        text-decoration: none;
+        color: #9D779B;;
+      }
+}
 
-  .prev-month {}
-  .next-month { }
-  .current-month {}
 
-  .has-events {}
+
+
+.simple-calendar th  {
+  padding: 15px;
+  background: #9D779B;;
+  border-bottom: 2px solid ;
+  border-collapse: collapse;
+  border-left: 1px solid #9D779B;
+  border-right: 1px solid #9D779B;
+  border-top: 0px none #9D779B;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.simple-calendar td {
+  border:1px solid #9D779B;
+    li {
+      list-style-type: none;
+      background: pink;
+      display: inline-block;
+      margin:4px;
+
+    }
 }

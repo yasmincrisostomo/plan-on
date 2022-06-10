@@ -1,15 +1,22 @@
-<h1>schedules</h1>
+<div class= "container col-8">
+  <section>
+    <div class= "text_title_schedules">
+      <h1>SCHEDULES</h1>
+    </div>
 
+    <div class= "btn-purple">
+      <%= link_to "add date", new_schedule_path %>
+    </div">
+  </section>
 
-<%= link_to "add date", new_schedule_path %>
-
-<%= month_calendar(events: @schedules, attribute: :date) do |date, schedules| %>
-  <%= date %>
-  <ul>
-    <% schedules.each do |schedule| %>
-      <li>
-        <%= schedule.title %>
-      </li>
-    <% end %>
-  </ul>
-<% end %>
+  <%= month_calendar(events: @schedules, attribute: :date) do |date, schedules| %>
+    <%= date.strftime('%d') %>
+    <ul>
+      <% schedules.each do |schedule| %>
+        <li>
+          <%= schedule.title %>
+        </li>
+      <% end %>
+    </ul>
+  <% end %>
+</div>

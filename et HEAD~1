@@ -1,0 +1,259 @@
+[33mcommit 1961537cc37df378b3c5010b40c7fa965de6e752[m[33m ([m[1;36mHEAD -> [m[1;32mcalendar_schedulle[m[33m)[m
+Author: gabrielalvino <gabrielalvino2008@gmail.com>
+Date:   Fri Jun 10 03:44:14 2022 -0300
+
+    ajustei cores da margem
+
+[33mcommit 64f7832269ba644995f5e782d968a583dc100381[m
+Author: gabrielalvino <gabrielalvino2008@gmail.com>
+Date:   Fri Jun 10 02:08:33 2022 -0300
+
+    coloquei datas somente por dia, mechi no front
+
+[33mcommit 34a57b11f7e32e42320b182832ce0e372a0364d2[m[33m ([m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmaster[m[33m)[m
+Merge: 44cc456 6886998
+Author: yasmin crisostomo <102832110+yasmincrisostom@users.noreply.github.com>
+Date:   Thu Jun 9 17:32:26 2022 -0300
+
+    Merge pull request #12 from yasmincrisostom/dash
+    
+    Dash
+
+[33mcommit 6886998bc3187547eceae2d8d45d088a3fc99aec[m[33m ([m[1;31morigin/dash[m[33m)[m
+Author: yasmin crisostomo <crisostomyasmin@gmail.com>
+Date:   Thu Jun 9 17:30:51 2022 -0300
+
+    timer
+
+[33mcommit a93de7541706720d67f679ac5b5af6a65ae07f01[m
+Author: yasmin crisostomo <crisostomyasmin@gmail.com>
+Date:   Thu Jun 9 16:59:30 2022 -0300
+
+    dashboard cards
+
+[33mcommit 44cc4563af2d9c19c7fbc40dc3d1db3ac3082cbd[m
+Merge: 0534efc aa8ec35
+Author: yasmin crisostomo <102832110+yasmincrisostom@users.noreply.github.com>
+Date:   Thu Jun 9 15:27:31 2022 -0300
+
+    Merge pull request #11 from yasmincrisostom/features_dash
+    
+    timer
+
+[33mcommit aa8ec35b5f0649c49b177ec9e891f5ca68230fd6[m
+Author: yasmin crisostomo <crisostomyasmin@gmail.com>
+Date:   Thu Jun 9 15:26:56 2022 -0300
+
+    timer
+
+[33mcommit 0534efca53ab927d9ccde85a33415565a524c9a6[m
+Author: yasmin crisostomo <crisostomyasmin@gmail.com>
+Date:   Thu Jun 9 11:57:02 2022 -0300
+
+    erro de importacao da page plan
+
+[33mcommit 565f254bbbb5895767f59876245472ef64717c31[m
+Merge: a59b972 2a650a9
+Author: yasmin crisostomo <102832110+yasmincrisostom@users.noreply.github.com>
+Date:   Thu Jun 9 11:54:01 2022 -0300
+
+    Merge pull request #10 from yasmincrisostom/dashboard
+    
+    Dashboard
+
+[33mcommit a59b97210ac87bf4cfe14d7f855dc3ffc9664037[m
+Merge: dda2610 476f989
+Author: yasmin crisostomo <102832110+yasmincrisostom@users.noreply.github.com>
+Date:   Thu Jun 9 11:53:47 2022 -0300
+
+    Merge pull request #9 from yasmincrisostom/schedule
+    
+    Schedule
+
+[33mcommit 2a650a9bc6a4c6329c40a291a65c4210c44de1c1[m
+Author: yasmin crisostomo <crisostomyasmin@gmail.com>
+Date:   Thu Jun 9 11:53:25 2022 -0300
+
+    dashboard
+
+[33mcommit 476f98955f10998bc4c43ca2cfc73da357b8b3e6[m[33m ([m[1;31morigin/schedule[m[33m)[m
+Merge: 7c6825d c35dc72
+Author: gabrielalvino <gabrielalvino2008@gmail.com>
+Date:   Thu Jun 9 11:45:25 2022 -0300
+
+    fixed conflicts
+
+[33mcommit c35dc720df1aac0c93b0dae270077473e6651b13[m
+Merge: 988962d dda2610
+Author: gabrielalvino <gabrielalvino2008@gmail.com>
+Date:   Thu Jun 9 11:42:06 2022 -0300
+
+    Merge branch 'master' of github.com:yasmincrisostom/plan-on
+
+[33mcommit 7c6825d244b131aab2d651fe461af736d433bfce[m
+Author: gabrielalvino <gabrielalvino2008@gmail.com>
+Date:   Thu Jun 9 11:41:32 2022 -0300
+
+    shedule one
+
+[33mcommit cd5e5625a9f94857b3310f1270421e636fd8eaef[m
+Author: yasmin crisostomo <crisostomyasmin@gmail.com>
+Date:   Thu Jun 9 11:31:43 2022 -0300
+
+    dashboard header
+
+[33mcommit dda2610ffd896588d8f53d0ab397304f8215c59a[m
+Merge: 73bd717 e755d2b
+Author: yasmin crisostomo <102832110+yasmincrisostom@users.noreply.github.com>
+Date:   Wed Jun 8 17:53:38 2022 -0300
+
+    Merge pull request #8 from yasmincrisostom/roda
+    
+    Roda da vida
+
+[33mcommit e755d2b34b157b9aee9bac3b3299584ba275cefb[m[33m ([m[1;31morigin/roda[m[33m)[m
+Author: yasmin crisostomo <crisostomyasmin@gmail.com>
+Date:   Wed Jun 8 17:52:11 2022 -0300
+
+    traits no dashboard
+
+[33mcommit 31a20821dba24112dde14c032d46cd325465573a[m
+Author: yasmin crisostomo <crisostomyasmin@gmail.com>
+Date:   Wed Jun 8 16:07:15 2022 -0300
+
+    dashboard
+
+[33mcommit a25e6029c9c7b2e3f6b7621437a8227eac81eb27[m
+Author: yasmin crisostomo <crisostomyasmin@gmail.com>
+Date:   Wed Jun 8 16:02:45 2022 -0300
+
+    css
+
+[33mcommit 73bd71781fc972f511e14909f88b9d173effa6c2[m
+Merge: f0464aa 0da76fb
+Author: yasmin crisostomo <102832110+yasmincrisostom@users.noreply.github.com>
+Date:   Wed Jun 8 14:53:06 2022 -0300
+
+    Merge pull request #7 from yasmincrisostom/profile
+    
+    Profile
+
+[33mcommit 0da76fb9a44790ef844ae0d2db39e6c74cd90f3f[m
+Author: yasmin crisostomo <crisostomyasmin@gmail.com>
+Date:   Wed Jun 8 14:50:19 2022 -0300
+
+    chart
+
+[33mcommit ab35669a51fced29762ab1eec1f14333621efc95[m
+Merge: a8396b1 988962d
+Author: gabrielalvino <gabrielalvino2008@gmail.com>
+Date:   Wed Jun 8 12:16:35 2022 -0300
+
+    Merge branch 'master' into schedule
+
+[33mcommit 988962db11bad111f506f7e8e76c60538702d719[m
+Merge: 7316f53 f0464aa
+Author: gabrielalvino <gabrielalvino2008@gmail.com>
+Date:   Wed Jun 8 12:15:56 2022 -0300
+
+    Merge branch 'master' of github.com:yasmincrisostom/plan-on
+
+[33mcommit a8396b1143de35246c240668241380eab19e3812[m
+Author: gabrielalvino <gabrielalvino2008@gmail.com>
+Date:   Wed Jun 8 12:15:45 2022 -0300
+
+    routes schedulles
+
+[33mcommit 6727f31a05eb7c663f7e94ecbfa57a520755c693[m
+Author: yasmin crisostomo <crisostomyasmin@gmail.com>
+Date:   Wed Jun 8 12:08:54 2022 -0300
+
+    profile
+
+[33mcommit f0464aadcc1695a60068787995b9e138d3fd5890[m
+Author: yasmin crisostomo <crisostomyasmin@gmail.com>
+Date:   Wed Jun 8 09:06:43 2022 -0300
+
+    corrigi erro das cores
+
+[33mcommit c1e91f0ea4d0adac7954d37f28a296f1d2ad6a2d[m
+Merge: cd68219 f8ce3d2
+Author: yasmin crisostomo <102832110+yasmincrisostom@users.noreply.github.com>
+Date:   Wed Jun 8 09:04:22 2022 -0300
+
+    Merge pull request #6 from yasmincrisostom/homepage
+    
+    Homepage
+    Corrigi o conflito, as definições de ci
+
+[33mcommit f8ce3d27132e31abc8334c8654d0fc209415a9e3[m
+Merge: d6e8a21 cd68219
+Author: yasmin crisostomo <102832110+yasmincrisostom@users.noreply.github.com>
+Date:   Wed Jun 8 09:03:45 2022 -0300
+
+    Merge branch 'master' into homepage
+
+[33mcommit d6e8a21dff4a65ea553da30884146ecbf9b9b77f[m[33m ([m[1;31morigin/homepage[m[33m)[m
+Author: gabrielalvino <gabrielalvino2008@gmail.com>
+Date:   Wed Jun 8 01:53:19 2022 -0300
+
+    config collors change
+
+[33mcommit 7316f53475836495b2bfe92d6d043cb1e8f1f163[m
+Merge: 377fc12 cd68219
+Author: gabrielalvino <gabrielalvino2008@gmail.com>
+Date:   Wed Jun 8 01:37:31 2022 -0300
+
+    Merge branch 'master' of github.com:yasmincrisostom/plan-on
+
+[33mcommit e6a6d9027d1dc8f7bee8b08792ff335b801345f1[m
+Author: gabrielalvino <gabrielalvino2008@gmail.com>
+Date:   Wed Jun 8 01:35:57 2022 -0300
+
+    feita homepage falta dar um acabamento, mas acho que ficou bem limpo, mas com um tempo vai ser melhorada
+
+[33mcommit cd682198ee2b659cf8204f3558da04a494d387c6[m
+Author: yasmin crisostomo <crisostomyasmin@gmail.com>
+Date:   Tue Jun 7 18:55:01 2022 -0300
+
+    corrigi erro dos profiles traits
+
+[33mcommit 2d73db0ab4ce1a3d1dd7d47ff43620a970d6770f[m
+Author: yasmin crisostomo <crisostomyasmin@gmail.com>
+Date:   Tue Jun 7 18:26:04 2022 -0300
+
+    seed
+
+[33mcommit c37e90a6b33fd39c8bada302454d178f7abfbadd[m
+Merge: a9d5bf2 8b7f0d5
+Author: yasmin crisostomo <102832110+yasmincrisostom@users.noreply.github.com>
+Date:   Tue Jun 7 18:12:43 2022 -0300
+
+    Merge pull request #5 from yasmincrisostom/navbar
+    
+    Navbar
+
+[33mcommit 8b7f0d5b58f865b4112687a13af2b923edb3332c[m
+Merge: d008939 a9d5bf2
+Author: yasmin crisostomo <102832110+yasmincrisostom@users.noreply.github.com>
+Date:   Tue Jun 7 18:12:38 2022 -0300
+
+    Merge branch 'master' into navbar
+
+[33mcommit d008939c05405bc616e774402d21ca33b8deefd7[m[33m ([m[1;31morigin/navbar[m[33m)[m
+Author: yasmin crisostomo <crisostomyasmin@gmail.com>
+Date:   Tue Jun 7 18:10:53 2022 -0300
+
+    profile
+
+[33mcommit d19a5697069bcd954d1d1d30467be83ee48e6bdf[m
+Author: gabrielalvino <gabrielalvino2008@gmail.com>
+Date:   Tue Jun 7 17:54:04 2022 -0300
+
+    did
+    student testimonials
+
+[33mcommit a9d5bf2bf7a5026286f92788af2934850470f5d9[m
+Merge: e4d6c3a b30dd6b
+Author: Pedro Costa <56699627+pedrocosta99@users.noreply.github.com>
+Date:   Tue Jun 7 17:19:20 2022 -0300
