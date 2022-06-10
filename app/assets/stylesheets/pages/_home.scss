@@ -107,16 +107,13 @@
 
 // Container Text of Introdution of Plan ON
 
-.principal-text {
-  height: 50vh;
-}
-
 .title-planon {
+  color: $light-purple;
   text-align: center;
 }
 
-.text-planon {
-  text-align: justify ;
+.text-home {
+  color: rgb(131, 131, 131);
 }
 
 // Smallest device
@@ -157,7 +154,6 @@
 // Benefits
 
 .container-benefits {
-  width: 1000px;
   position: relative;
   display: flex;
   justify-content: space-between;
