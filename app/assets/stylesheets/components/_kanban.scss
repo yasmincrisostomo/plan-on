@@ -1,3 +1,18 @@
+.card{
+  margin-left: 5px;
+  padding: 5px;
+}
+
+li{
+  list-style-type: none;
+}
+
+.btn{
+  width: 100%;
+}
+
+// kanban
+
 .kanban {
   display: flex;
   margin: 24px;
@@ -7,7 +22,6 @@
   list-style: none;
   width: 160px;
   padding: 0;
-  margin-left: 8px;
 }
 
 .kanban-col-name {
@@ -15,9 +29,12 @@
   text-align: center;
   margin-bottom: 16px;
   padding: 16px;
+  // margin-left: 8px;
 }
 
 .kanban-col-item {
+  display: flex;
+  flex-direction: column;
   background-color: white;
   margin-bottom: 4px;
   padding: 16px;
