@@ -14,8 +14,9 @@ class PagesController < ApplicationController
   end
 
   def plan
-    @containers = Container.all
-    @cards = Card.all
+    user = current_user
+    @containers = user.containers
+    @cards = user.cards
 
     @container = Container.new
   end
