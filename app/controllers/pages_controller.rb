@@ -6,6 +6,11 @@ class PagesController < ApplicationController
   end
 
   def dashboard
+    @user_name = current_user.name
+
+    @cards = current_user.cards.order(:title).first(4)
+    @cards_empty = @cards.pluck(:title).all?("0")
+
     @profile_traits = current_user.profile_traits.order(:user_answer).first(4)
     @profile_traits_empty = @profile_traits.pluck(:user_answer).all?("0")
   end
