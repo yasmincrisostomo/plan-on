@@ -1,11 +1,15 @@
-<h1>Create card</h1>
-
-
-<%# <%= simple_form_for container_card_path do |f| %> %>
-
-<%= simple_form_for [@container, @card] do |f| %>
-  <%= f.input :title %>
-  <%= f.input :description %>
-  <%= f.input :position %>
-  <%= f.button :submit %>
-<% end %>
+<div class="container py-5">
+  <div class="row justify-content-center">
+    <div class="col-12 rounded justify-content-center d-flex">
+      <div class="bg-white col-9 col-md-6 col-lg-6 p-3 shadow">
+        <h2>Create card</h2>
+        <%= simple_form_for [@container, @card] do |f| %>
+          <%= f.input :title %>
+          <%= f.input :description %>
+          <%= f.input :position %>
+          <%= f.button :submit, class: "btn btn-purple rounded-pill" %>
+        <% end %>
+       </div>
+    </div>
+  </div>
+</div>

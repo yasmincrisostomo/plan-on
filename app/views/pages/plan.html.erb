@@ -1,7 +1,3 @@
-<h1>Planejamento de camadas</h1>
-
-
-
 <div class="kanban" data-controller="kanban">
 
   <% @containers.each do |container| %>
@@ -30,6 +26,7 @@
           </div>
         <% end %>
         <%= link_to "Delete Container", container, method: :delete, class: "btn-warning btn" %>
+
       </li>
     </div>
   <% end %>
