@@ -1,10 +1,6 @@
 class SchedulesController < ApplicationController
   def index
     @schedules = Schedule.all
-  end
-
-  def new
-    # @schedule = Schedule.find(params[:schedule_id])
     @schedule = Schedule.new
   end
 

@@ -43,7 +43,6 @@ class CardsController < ApplicationController
     @card = Card.find(params[:id])
   end
 
-
   def card_params
     params.require(:card).permit(:title, :description)
   end
