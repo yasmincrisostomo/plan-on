@@ -2,19 +2,19 @@ User.destroy_all
 
 Trait.destroy_all
 
-Trait.create!(name: "Concentration", message: "Fique longe de distrações!")
+Trait.create!(name: "Concentration", message: "Eliminate distractions.")
 
-Trait.create!(name: "Constancy", message: "Melhore!")
+Trait.create!(name: "Consistency", message: "Isolate one goal.")
 
-Trait.create!(name: "Motivation", message: "Melhore!")
+Trait.create!(name: "Motivation", message: "Review your progress.")
 
-Trait.create!(name: "Organization", message: "Melhore!")
+Trait.create!(name: "Organization", message: "Build a to-do list.")
 
-Trait.create!(name: "Rest", message: "Melhore!")
+Trait.create!(name: "Rest", message: "Give yourself time to disconnect.")
 
-Trait.create!(name: "Emotional balance", message: "Melhore!")
+Trait.create!(name: "Emotional balance", message: "Be aware of your emotions.")
 
-Trait.create!(name: "Material quality", message: "Melhore!")
+Trait.create!(name: "Material quality", message: "Find your method.")
 
 user = User.create!(email: 'alguem@email.com', password: '123123', name: 'Alguem', type_of_student: 'Folgado')
 
