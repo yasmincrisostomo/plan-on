@@ -28,8 +28,8 @@ class ContainersController < ApplicationController
   end
 
   private
+
   def container_params
     params.require(:container).permit(:card_category)
   end
-
 end
