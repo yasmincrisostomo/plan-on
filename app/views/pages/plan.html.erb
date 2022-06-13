@@ -8,7 +8,9 @@
     <div class="d-flex flex-column mx-1">
       <li class="kanban-col-name d-flex justify-content-between">
         <%= container.card_category %>
-
+        <%= link_to container, method: :delete, class: "text-dark" do %>
+          <i class="fa fa-trash" aria-hidden="true"></i>
+        <% end %>
       </li>
 
       <ul class="kanban-col" data-kanban-target="container" data-container-id="<%= container.id %>">
@@ -29,7 +31,7 @@
                 placeholder: "New Card", type: "submit" %>
           </div>
         <% end %>
-        <%= link_to "Delete Container", container, method: :delete, class: "btn-warning btn" %>
+
       </li>
     </div>
   <% end %>
