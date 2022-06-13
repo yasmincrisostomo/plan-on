@@ -4,18 +4,7 @@
     <div class="d-flex flex-column mx-1">
       <li class="kanban-col-name d-flex justify-content-between">
         <%= container.card_category %>
-
       </li>
-
-      <ul class="kanban-col" data-kanban-target="container" data-container-id="<%= container.id %>">
-        <% container.cards.order(:position).each do |card| %>
-          <%# card %>
-          <li class="kanban-col-item" data-kanban-target="card" data-card-id="<%= card.id %>">
-            <%= card.title %>
-            <%= card.description %>
-          </li>
-        <% end %>
-      </ul>
 
       <li>
         <%= simple_form_for [container, @card] do |f| %>
@@ -25,9 +14,17 @@
                 placeholder: "New Card", type: "submit" %>
           </div>
         <% end %>
-        <%= link_to "Delete Container", container, method: :delete, class: "btn-warning btn" %>
-
       </li>
+
+      <ul class="kanban-col" data-kanban-target="container" data-container-id="<%= container.id %>">
+        <% container.cards.order(:position).each do |card| %>
+          <li class="kanban-col-item" data-kanban-target="card" data-card-id="<%= card.id %>">
+            <%= card.title %>
+          </li>
+        <% end %>
+        <%= link_to "Delete Container", container, method: :delete, class: "btn btn-purple w-100" %>
+      </ul>
+
     </div>
   <% end %>
 

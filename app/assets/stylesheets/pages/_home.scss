@@ -89,6 +89,7 @@
 
 .masthead .masthead-cards .card.border-bottom {
   color: $purple;
+  border-radius: 8px;
 }
 
 .masthead .masthead-cards .card.border-bottom:hover {
@@ -260,4 +261,8 @@
   overflow: hidden;
   border: 3px solid #fff;
   border-radius: 50%;
+}
+
+.dark-grey-text {
+  color: rgb(131, 131, 131);
 }
