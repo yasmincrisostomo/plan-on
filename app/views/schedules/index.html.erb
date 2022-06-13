@@ -10,7 +10,8 @@
     <ul>
       <% schedules.each do |schedule| %>
         <li>
-          <%= schedule.title %>
+          <%= link_to schedule.title, edit_schedule_path(schedule) %>
+
         </li>
       <% end %>
     </ul>
