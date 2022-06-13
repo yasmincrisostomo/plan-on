@@ -28,6 +28,7 @@
             <%= f.button :submit, "Sign up", class:"btn btn-purple rounded-pill"%>
           </div>
         <% end %>
+        <%= link_to "Sign in with Google", user_google_oauth2_omniauth_authorize_path, method: :post %>
       </div>
       <div class="col-3 roda-da-vida">
       </div>
