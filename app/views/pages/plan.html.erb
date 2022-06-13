@@ -9,11 +9,6 @@
       <li class="kanban-col-name d-flex justify-content-between">
         <%= container.card_category %>
 
-        <%# <%= button_tag type: "submit", method: :delete, class: "search-category-button btn btn-light-blue rounded-pill mt-3" do %>
-          <%# <span><i class="fa fa-trash" aria-hidden="true"></i></span> %>
-        <%# <% end %>
-
-        <%# <%= link_to "DEL", container, method: :delete, class: "btn-purple rounded-pill" %>
       </li>
 
       <ul class="kanban-col" data-kanban-target="container" data-container-id="<%= container.id %>">
@@ -27,7 +22,13 @@
       </ul>
 
       <li>
-        <%= link_to "+ Add", new_container_card_path(container), class: "btn-purple btn mb-1" %>
+        <%= simple_form_for [container, @card] do |f| %>
+          <div class="d-flex">
+            <%= f.input :title, label: false,
+                # formaction: `/plan/containers/#{container.id}/cards/new` ,
+                placeholder: "New Card", type: "submit" %>
+          </div>
+        <% end %>
         <%= link_to "Delete Container", container, method: :delete, class: "btn-warning btn" %>
       </li>
     </div>
