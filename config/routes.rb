@@ -13,7 +13,7 @@ Rails.application.routes.draw do
   resources :containers, only: :destroy
   resources :tags, only: %i[destroy edit update]
 
-  resources :schedules, as: "schedules"
+  resources :schedules 
 
   resources :pomodoros, only: %i[index]
 
