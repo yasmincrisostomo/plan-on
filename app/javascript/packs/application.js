@@ -14,3 +14,7 @@ ActiveStorage.start()
 
 import "controllers"
 import "bootstrap"
+
+// import { initFlatpickr } from "../plugins/flatpickr";
+
+// initFlatpickr();

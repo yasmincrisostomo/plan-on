@@ -10,7 +10,7 @@
     <ul>
       <% schedules.each do |schedule| %>
         <li>
-          <%= link_to schedule.title, edit_schedule_path(schedule) %>
+          <%= link_to " #{l schedule.date, format: '%H:%M'} #{schedule.title}", edit_schedule_path(schedule) %>
 
         </li>
       <% end %>
@@ -35,10 +35,17 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        <%= simple_form_for @schedule do |f| %>
+        <div data-controller="flatpickr" >
+          <%= simple_form_for @schedule do |f| %>
             <%= f.input :title %>
-            <%= f.input :date %>
+            <div class="flatpickr">
+
+            </div>
+            <%= f.input :date, as: :string, required: true, input_html: {class: "datepicker"} %>
+            <%= f.submit class: "btn btn-purple rounded-pill"%>
           <% end %>
+        </div>
+    </div>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-purple rounded-pill">Save changes</button>
