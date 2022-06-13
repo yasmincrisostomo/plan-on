@@ -14,11 +14,20 @@ class PagesController < ApplicationController
   end
 
   def plan
-    @containers = Container.all
-    @cards = Card.all
+    user = current_user
+    @containers = user.containers
+    @cards = user.cards
 
     @container = Container.new
+    @card = Card.new
+    # container_id = Container.find(params[:container_id])
   end
+
+  # def create_card(container_id)
+  #   @container = Container.find(container_id)
+  #   @card = Card.new
+  #   @card.container = @container
+  # end
 
   def update_cards
 
