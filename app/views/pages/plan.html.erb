@@ -25,17 +25,15 @@
                   <%= card.title %>
                 </div>
               <%# MODAL code %>
-                  <% card_id = `cardModal-#{card}` %>
-                  <div class="modal fade" id="#cardModal"
-                       tabindex="-1" aria-hidden="true">
-                    <%= render "card", container: container, card: card %>
+                  <div class="modal fade" id="form-modal-<%= card.id%>-<%= container.id%>" tabindex="-1" aria-hidden="true">
+                    <%= render :partial => "card", :locals => {:card => card, :container => container} %>
                   </div>
               <%# Card buttons %>
                   <%# toggle card %>
                   <i
                     type="button"
                     data-bs-toggle="modal"
-                    data-bs-target="#cardModal"
+                    data-bs-target="#form-modal-<%= card.id%>-<%= container.id%>"
                     class="card-button fas fa-eye">
                   </i>
                   <%# delete card %>
