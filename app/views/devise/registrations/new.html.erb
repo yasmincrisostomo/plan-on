@@ -1,39 +1,54 @@
 <div class="container py-5">
   <div class="row justify-content-center">
-    <div class="col-12 rounded justify-content-center d-flex">
-      <div class="bg-white col-9 col-md-6 col-lg-6 p-3 shadow">
-        <h2>Sign up</h2>
-
-        <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-          <%= f.error_notification %>
-
-          <div class="form-inputs">
-            <%= f.input :name,
-                        required: true,
-                        autofocus: true,
-                        input_html: { autocomplete: "name" }%>
-            <%= f.input :email,
-                        required: true,
-                        input_html: { autocomplete: "email" }%>
-            <%= f.input :password,
-                        required: true,
-                        hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
-                        input_html: { autocomplete: "new-password" } %>
-            <%= f.input :password_confirmation,
-                        required: true,
-                        input_html: { autocomplete: "new-password" } %>
-            <%= f.input :avatar, label: "Profile picture",
-                        required: true,
-                        as: :file %>
+    <div class="rounded justify-content-center d-flex">
+      <div class="row bg-white p-5 shadow sign">
+        <div class="col-7">
+          <h2 class="text-center fw-bold mt-5">Sign up</h2>
+          <div class="social-container text-center">
+            <%= link_to user_google_oauth2_omniauth_authorize_path, method: :post, class: "social" do %>
+                <i class="fab fa-google-plus-g"></i>
+              <% end %>
           </div>
-
-          <div class="form-actions">
-            <%= f.button :submit, "Sign up", class:"btn btn-purple rounded-pill"%>
+          <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+            <div class="form-inputs">
+              <%= f.input :name,
+                          placeholder: "Name",
+                          required: true,
+                          autofocus: true,
+                          input_html: { autocomplete: "name" },
+                          label: false %>
+              <%= f.input :email,
+                          placeholder: "Email",
+                          required: true,
+                          input_html: { autocomplete: "email" },
+                          label: false %>
+              <%= f.input :password,
+                          placeholder: "Password",
+                          required: true,
+                          hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
+                          input_html: { autocomplete: "new-password" },
+                          label: false %>
+              <%= f.input :password_confirmation,
+                          placeholder: "Password confirmation",
+                          required: true,
+                          input_html: { autocomplete: "new-password" },
+                          label: false %>
+              <%= f.input :avatar, label: false,
+                          required: true,
+                          as: :file %>
           </div>
-        <% end %>
-        <%= link_to "Sign in with Google", user_google_oauth2_omniauth_authorize_path, method: :post %>
-      </div>
-      <div class="col-3 roda-da-vida">
+          <div class="form-actions text-center">
+            <%= f.button :submit, "Sign up", class:"btn btn-purple rounded-pill my-2 w-25"%>
+          </div>
+          <% end %>
+
+          <div class="links text-center">
+            <%= render "devise/shared/links" %>
+          </div>
+        </div>
+        <div class="col-5 h-100 d-flex align-items-center">
+          <%= image_tag "sign.svg", class: "w-100" %>
+        </div>
       </div>
     </div>
   </div>

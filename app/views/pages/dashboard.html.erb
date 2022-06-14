@@ -27,7 +27,7 @@
    <div class="dashboard-card dashboard-timer">
     <div class="dashboard-title sm">
       <div class="icon">
-        <i class="fas fa-bullseye"></i>
+        <i class="fas fa-clock"></i>
         <h6>Timer</h6>
       </div>
       <div class="badge badge-red">Pomodoro</div>
@@ -51,7 +51,7 @@
   <div class="dashboard-card dashboard-planner">
     <div class="dashboard-title lg">
       <div class="icon">
-        <i class="fas fa-bullseye"></i>
+        <i class="fas fa-tasks"></i>
         <h6>To Do List</h6>
       </div>
       <div class="badge badge-green">Planner</div>
@@ -63,7 +63,7 @@
     <% else %>
       <ul>
         <%  @cards.each do |card| %>
-          <li><%= card.title %></li>
+          <li class="recent-tasks"><%= card.title %></li>
         <% end %>
       </ul>
     <% end %>
