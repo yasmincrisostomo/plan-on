@@ -18,9 +18,14 @@
         <ul class="kanban-col" data-kanban-target="container" data-container-id="<%= container.id %>">
           <% container.cards.order(:position).each do |card| %>
             <%# card %>
-            <li class="kanban-col-item shadow" data-kanban-target="card" data-card-id="<%= card.id %>">
-              <%= card.title %>
-              <%= card.description %>
+            <li class="kanban-col-item shadow d-flex flex-row"
+                data-kanban-target="card" data-card-id="<%= card.id %>">
+              <div class="width-90">
+                <%= card.title %>
+              </div>
+              <%= link_to card, method: :delete do %>
+                <i class="detele-card fa fa-times" aria-hidden="true"></i>
+              <% end %>
             </li>
           <% end %>
         </ul>

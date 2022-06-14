@@ -71,3 +71,14 @@ li {
   margin: 0;
   height: 38px;
 }
+
+.width-90{
+  width: 90%;
+}
+
+.detele-card {
+  color: #bfbcc4;
+  &:hover {
+    color: rgb(5, 6, 16);
+  }
+}
