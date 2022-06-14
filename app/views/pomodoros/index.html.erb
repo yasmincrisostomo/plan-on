@@ -81,7 +81,7 @@
   }
 
   function startBreak() {
-    timer.innerHTML = 'break';
+    timer.innerHTML = 'Break';
     clearInterval(countdown);
     countdown = setInterval(function() {
       startCountdown(restSeconds);
@@ -122,7 +122,8 @@
     startBreakButton.innerHTML = 'Start';
   }
 
-  function subtractSession() {
+  function subtractSession(event) {
+    event.preventDefault();
     session--;
     if (session < 0) session = 0;
     sessionSeconds = session * 60;
@@ -130,6 +131,7 @@
   }
 
   function subtractBreak() {
+    event.preventDefault();
     rest--;
     if (rest < 0) rest = 0;
     restSeconds = rest * 60;
@@ -137,12 +139,14 @@
   }
 
   function addSession() {
+    event.preventDefault();
     session++;
     sessionSeconds = session * 60;
     sessionMinutes.innerHTML = ' ' + session + ' ';
   }
 
   function addBreak() {
+    event.preventDefault();
     rest++;
     restSeconds = rest * 60;
     breakMinutes.innerHTML = ' ' + rest + ' ';

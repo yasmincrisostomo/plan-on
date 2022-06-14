@@ -6,6 +6,11 @@ class PagesController < ApplicationController
   end
 
   def dashboard
+    @user_name = current_user.name
+
+    @cards = current_user.cards.order(:title).first(4)
+    @cards_empty = @cards.pluck(:title).all?("0")
+
     @profile_traits = current_user.profile_traits.order(:user_answer).first(4)
     @profile_traits_empty = @profile_traits.pluck(:user_answer).all?("0")
   end
@@ -16,7 +21,6 @@ class PagesController < ApplicationController
   def plan
     user = current_user
     @containers = user.containers
-    @cards = user.cards
 
     @container = Container.new
     @card = Card.new
@@ -29,7 +33,6 @@ class PagesController < ApplicationController
   # end
 
   def update_cards
-
     hash = JSON.parse(request.body.read)
     hash.each do |container_id, cards|
       container = Container.find(container_id)
@@ -40,7 +43,6 @@ class PagesController < ApplicationController
         card.save
       end
     end
-
   end
 
   def profile

@@ -1,0 +1,120 @@
+<div class="card card-illustration">
+  <div class="d-flex align-items-end">
+    <div class="col-sm-7">
+      <div class="card-body">
+        <p>Hi, <%= @user_name %>!</p>
+        <p class="mb-4">xxxxxxxxxxxxxxxx</p>
+      </div>
+    </div>
+    <div class="col-sm-5 text-center text-sm-left">
+      <div class="card-body pb-0 px-0 px-md-4">
+        <%# <%= image_tag "pessoa.png", class: "img-circle logo-nav", alt: "logo" %>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="container mt-5 mb-3">
+  <div class="row">
+    <div class="col-md-6 mb-3">
+      <div class="card p-3">
+        <div class="d-flex justify-content-between">
+          <div class="d-flex flex-row align-items-center">
+            <div class="icon"><i class="fas fa-bullseye"></i>
+            </div>
+            <div class="ms-2">
+              <h6 class="mb-0">Weekly Goals</h6>
+            </div>
+          </div>
+          <div class="badge"><span>Wheel of life</span></div>
+        </div>
+        <div class="mt-3">
+          <h3 class="heading">This week you need to work on:</h3>
+          <hr>
+          <div class="mt-2">
+            <% if @profile_traits_empty %>
+              <p>The Wheel of Life is a simple but powerful tool that helps you visualize all the important areas of your life at once. It is often used by life coaches and career coaches to give their clients a "bird's eye" view of their lives.
+               By looking at a visual representation of all the areas of your life at once, the wheel helps you to better understand which of your life areas are flourishing and which ones need the most work.</p>
+               <%= link_to "Wheel of life", edit_profiles_path, class: "btn btn-purple rounded-pill" %>
+            <% else %>
+              <ul>
+                <%  @profile_traits.each do |profiles_trait| %>
+                  <li><%= profiles_trait.trait.name %></li>
+                  <p><%= profiles_trait.trait.message %></p>
+                <% end %>
+              </ul>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6 mb-3">
+      <div class="card p-3">
+        <div class="d-flex justify-content-between">
+          <div class="d-flex flex-row align-items-center">
+            <div class="icon"><i class="fas fa-list"></i></div>
+            <div class="ms-2">
+                <h6 class="mb-0">Weekly Todo List</h6>
+            </div>
+          </div>
+          <div class="badge"><span>Planner</span></div>
+        </div>
+        <div class="mt-3">
+          <h3 class="heading">Tasks you need to do this week:</h3>
+          <hr>
+          <div class="mt-2">
+            <p>The importance of project management in organizations can't be overstated. When it's done right, it helps every part of the business run more smoothly.
+             It allows to focus on the work that matters, free from the distractions caused by tasks going off track or budgets spinning out of control. The visual work management tool that empowers teams to ideate, plan and manage the work in a productive and organized way.</p>
+             <%= link_to "Planner", plan_path, class: "btn btn-purple rounded-pill" %>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6 mb-5">
+      <div class="card p-3 my-3">
+        <div class="d-flex justify-content-between">
+            <div class="d-flex flex-row align-items-center">
+              <div class="icon"><i class="fas fa-clock"></i></div>
+              <div class="ms-2">
+                  <h6 class="mb-0">Intelligent Timer</h6>
+              </div>
+            </div>
+            <div class="badge"><span>Pomodoro</span></div>
+          </div>
+          <div class="mt-3">
+            <h3 class="heading">Set estimate pomodoros for each tasks:</h3>
+            <hr>
+            <div class="mt-2">
+              <p>The Pomodoro Technique is created by Francesco Cirillo for a more productive way to work and study.
+               The technique uses a timer to break down work into intervals. Get a to-do list and a timer. Set your timer for 25 minutes, and focus on a single task until the timer rings. When your session ends, mark off one pomodoro and record what you completed. Then enjoy a five-minute break. After four pomodoros, take a longer, more restorative 15-30 minute break.</p>
+              <%= link_to "Pomodoro", pomodoros_path, class: "btn btn-purple rounded-pill" %>
+            </div>
+          </div>
+      </div>
+    </div>
+    <div class="col-md-6 mb-5">
+      <div class="card p-3 my-3">
+        <div class="d-flex justify-content-between">
+            <div class="d-flex flex-row align-items-center">
+              <div class="icon"><i class="fas fa-calendar-week"></i></div>
+              <div class="ms-2">
+                  <h6 class="mb-0">Calendar</h6>
+              </div>
+            </div>
+            <div class="badge"><span>Schedule</span></div>
+          </div>
+          <div class="mt-3">
+            <h3 class="heading">Get a broad view of the month:</h3>
+            <hr>
+            <div class="mt-3">
+              <p>As you might imagine, planners help you stay healthy in a wide range of ways. It helps your physical health by helping you track things like diet and exercise,
+               you can schedule regular doctor and dentist appointments, and make sure you are getting enough fresh air and vitamin D by scheduling days spent outdoors. You get mental health benefits by reducing stress and anxiety,
+                and even having journaling pages for when you just need a good brain dump.</p>
+              <%= link_to "Schedule", schedules_path, class: "btn btn-purple rounded-pill" %>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>

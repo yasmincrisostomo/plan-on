@@ -1,11 +1,7 @@
-<div class= "container col-8">
+<div class="container col-8 text-center">
   <section>
-    <div class= "text_title_schedules">
-      <h1>SCHEDULES</h1>
-    </div>
-
-    <div class= "btn-date">
-      <%= link_to "Add date", new_schedule_path %>
+    <div class="text_title_schedules">
+      <h1>SCHEDULE</h1>
     </div>
   </section>
 
@@ -14,9 +10,46 @@
     <ul>
       <% schedules.each do |schedule| %>
         <li>
-          <%= schedule.title %>
+          <%= link_to " #{l schedule.date, format: '%H:%M'} #{schedule.title}", edit_schedule_path(schedule) %>
+
         </li>
       <% end %>
     </ul>
   <% end %>
+
+   <div>
+    <button type="button" class="btn btn-purple rounded-pill mt-3 mb-5" data-bs-toggle="modal" data-bs-target="#scheduleModal">
+      Add an event
+    </button>
+    </div>
+</div>
+
+<!-- Button trigger modal -->
+
+<!-- Modal -->
+<div class="modal fade" id="scheduleModal" tabindex="-1" aria-labelledby="scheduleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="scheduleModalLabel">Add an event</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div data-controller="flatpickr" >
+          <%= simple_form_for @schedule do |f| %>
+            <%= f.input :title %>
+            <div class="flatpickr">
+
+            </div>
+            <%= f.input :date, as: :string, required: true, input_html: {class: "datepicker"} %>
+            <%= f.submit class: "btn btn-purple rounded-pill"%>
+          <% end %>
+        </div>
+    </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-purple rounded-pill">Save changes</button>
+      </div>
+    </div>
+  </div>
 </div>

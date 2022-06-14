@@ -8,9 +8,12 @@
           <%= f.error_notification %>
 
           <div class="form-inputs">
-            <%= f.input :email,
+            <%= f.input :name,
                         required: true,
                         autofocus: true,
+                        input_html: { autocomplete: "name" }%>
+            <%= f.input :email,
+                        required: true,
                         input_html: { autocomplete: "email" }%>
             <%= f.input :password,
                         required: true,
@@ -28,6 +31,7 @@
             <%= f.button :submit, "Sign up", class:"btn btn-purple rounded-pill"%>
           </div>
         <% end %>
+        <%= link_to "Sign in with Google", user_google_oauth2_omniauth_authorize_path, method: :post %>
       </div>
       <div class="col-3 roda-da-vida">
       </div>

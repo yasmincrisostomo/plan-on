@@ -10,6 +10,20 @@ end
 
 gem 'ice_cube'
 gem "simple_calendar"
+gem 'tailwindcss-rails'
+gem 'omniauth-google-oauth2'
+gem 'omniauth-rails_csrf_protection'
+# gem 'omniauth-facebook'
+
+# payment gems
+gem 'pay', '~> 2.0'
+
+gem 'stripe', '< 6.0', '>= 2.8'
+gem 'stripe_event', '~> 2.3'
+
+# To use Braintree + PayPal, also include:
+gem 'braintree', '<3.0', '>= 2.92.0'
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
 gem 'rails', '~> 6.1.6'
 # Use postgresql as the database for Active Record
@@ -36,6 +50,7 @@ gem 'redis', '~> 4.0'
 gem 'bootsnap', '>= 1.4.4', require: false
 
 gem 'devise'
+gem 'cloudinary', '~> 1.16.0'
 
 gem 'autoprefixer-rails', '10.2.5'
 gem 'font-awesome-sass', '~> 5.6.1'
