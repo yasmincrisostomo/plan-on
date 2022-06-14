@@ -1,0 +1,14 @@
+<div class="modal fade" id="cardModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <%= simple_form_for [container, card],
+          method: :patch do |f| %>
+        <div class="d-flex">
+          <%= f.input :title,
+              # formaction: `/plan/containers/#{container.id}/cards/new` ,
+              placeholder: card.title, type: "submit" %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

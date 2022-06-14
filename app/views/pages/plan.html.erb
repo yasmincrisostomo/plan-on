@@ -17,22 +17,33 @@
 
         <ul class="kanban-col" data-kanban-target="container" data-container-id="<%= container.id %>">
           <% container.cards.order(:position).each do |card| %>
-    <%# card %>
-            <li class="kanban-col-item shadow d-flex flex-row"
-                data-kanban-target="card" data-card-id="<%= card.id %>">
+              <%# card %>
+              <li class="kanban-col-item shadow d-flex flex-row"
+                  data-kanban-target="card" data-card-id="<%= card.id %>">
 
-              <div class="width-87">
-                <%= card.title %>
-              </div>
-    <%# Card buttons %>
-              <%= link_to [container, card], method: :get do %>
-                <i class="card-button fas fa-eye"></i>
-              <% end %>
-              <%# %,  {:remote => true, 'data-toggle' =>  "modal", 'data-target' => '#modal-window', class: 'btn btn-primary btn-lg'}  %>
-              <%= link_to card, method: :delete do %>
-                <i class="card-button fa fa-times" aria-hidden="true"></i>
-              <% end %>
-            </li>
+                <div class="width-87">
+                  <%= card.title %>
+                </div>
+              <%# MODAL code %>
+                  <% card_id = `cardModal-#{card}` %>
+                  <div class="modal fade" id="#cardModal"
+                       tabindex="-1" aria-hidden="true">
+                    <%= render "card", container: container, card: card %>
+                  </div>
+              <%# Card buttons %>
+                  <%# toggle card %>
+                  <i
+                    type="button"
+                    data-bs-toggle="modal"
+                    data-bs-target="#cardModal"
+                    class="card-button fas fa-eye">
+                  </i>
+                  <%# delete card %>
+                  <%= link_to card, method: :delete do %>
+                    <i class="card-button fa fa-times" aria-hidden="true"></i>
+                  <% end %>
+
+              </li>
           <% end %>
         </ul>
 
