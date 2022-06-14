@@ -4,12 +4,12 @@
       <%= simple_form_for [container, card],
           method: :patch do |f| %>
         <div class="d-flex flex-column">
-          <%= f.input :title, label: "Card Title", required: false, placeholder: card.title %>
+          <%= f.input :title, label: "Card Title", required: false %>
           <%= f.input :description,
               as: :text, :input_html => { :cols => 5, :rows => 8 },
-              label: "Description", placeholder: card.description %>
+              label: "Description", placeholder: "Add description" %>
 
-          <%= f.submit :submit, label: "Update Card" ,class: "btn btn-secondary" %>
+          <%= f.submit :submit, value: "Update Card" ,class: "btn btn-secondary" %>
         </div>
       <% end %>
     </div>
