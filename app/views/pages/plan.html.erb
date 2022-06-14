@@ -30,12 +30,14 @@
                   </div>
               <%# Card buttons %>
                   <%# toggle card %>
-                  <i
-                    type="button"
-                    data-bs-toggle="modal"
-                    data-bs-target="#form-modal-<%= card.id%>-<%= container.id%>"
-                    class="card-button fas fa-eye">
-                  </i>
+                  <div>
+                    <i
+                      type="button"
+                      data-bs-toggle="modal"
+                      data-bs-target="#form-modal-<%= card.id%>-<%= container.id%>"
+                      class="card-button fas fa-eye">
+                    </i>
+                  </div>
                   <%# delete card %>
                   <%= link_to card, method: :delete do %>
                     <i class="card-button fa fa-times" aria-hidden="true"></i>
