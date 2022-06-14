@@ -28,13 +28,25 @@
 
 .simple-calendar td {
   border:1px solid #9D779B;
+
+  ul {text-align: start;}
   li {
     color: white;
     list-style-type: none;
     background: #d2a0d0;
-    display: inline-block;
-    margin: 8px;
+    display: ruby-base;
+    margin-top: 10px;
+    text-decoration: none;
+    display: ruby-base;
+
+    a {
+      color: black;
+      text-decoration: none;
+
+    }
+
   }
+
 }
 
 .simple-calendar .prev-month {
