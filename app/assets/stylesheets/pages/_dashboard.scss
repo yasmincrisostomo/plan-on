@@ -65,19 +65,26 @@
   align-items: center;
 }
 
+.badge-blue {
+  background-color: #E7F7FB;
+  color: #02C3EC;
+}
+
+.badge-red {
+  background-color: #FFE8E5;
+  color: #FF3E1D;
+}
+
+.badge-yellow {
+  background-color: #FFF1D6;
+  color: #FFAF22;
+}
+
 .badge-green {
   background-color: #EEFBE8;
   color: #71DD37;
 }
 
-.badge-blue {
-  background-color: #E7F7FB;
-  color: #02C3EC;
-}
-.badge-yellow {
-  background-color: #FFF1D6;
-  color: #FFAF22;
-}
 
 .dashboard-img {
   width: 200px;
