@@ -270,3 +270,10 @@
 .dark-grey-text {
   color: rgb(131, 131, 131);
 }
+
+.img-home {
+  object-fit: cover;
+  border-radius:50%;
+  width: 250px;
+  height: 250px;
+}

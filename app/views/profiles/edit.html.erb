@@ -1,22 +1,28 @@
 <div class="container py-5">
-  <div class="row justify-content-center">
-      <div class="profile-form bg-white col-8 col-md-6 col-lg-6 p-5 d-flex flex-column align-items-center">
-        <h1 class="my-4 fw-bold title-profile">Wheel of Life</h1>
-        <div>
-          <%= simple_form_for current_user, url: profiles_path(current_user), method: :patch do |f| %>
-            <%= f.simple_fields_for :profile_traits do |profile_trait| %>
-              <%= profile_trait.input :user_answer,
-                                      input_html: { min: 1, max: 10, class: 'category-selector' },
-                                      label: profile_trait.object.trait.name,
-                                      as: :radio_buttons, collection: (0..10),
-                                      collection_wrapper_tag: 'div',
-                                      collection_wrapper_class: 'd-flex',
-                                      item_wrapper_class: 'category-item' %>
+  <div class="row wheel-container">
+    <div class="rounded d-flex text-center">
+      <div class="row bg-white p-5 shadow wheel">
+        <div class="col-8">
+          <h2 class="fw-bold mt-5">Wheel of Life</h2>
+          <div class="d-flex flex-column align-items-center">
+            <%= simple_form_for current_user, url: profiles_path(current_user), method: :patch do |f| %>
+              <%= f.simple_fields_for :profile_traits do |profile_trait| %>
+                <%= profile_trait.input :user_answer,
+                                        input_html: { min: 1, max: 10, class: 'category-selector' },
+                                        label: profile_trait.object.trait.name,
+                                        as: :radio_buttons, collection: (0..10),
+                                        collection_wrapper_tag: 'div',
+                                        collection_wrapper_class: 'd-flex',
+                                        item_wrapper_class: 'category-item' %>
+              <% end %>
+              <%= f.submit "Update", class: "btn btn-purple rounded-pill"%>
             <% end %>
-            <%= f.submit "Update", class: "btn btn-purple rounded-pill"%>
-          <% end %>
+          </div>
+        </div>
+        <div class="col-4 h-100 d-flex align-items-center">
+          <%= image_tag "project.svg", class: "w-100" %>
         </div>
       </div>
-      <div class="col-4 roda-da-vida"></div>
+    </div>
   </div>
 </div>
