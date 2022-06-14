@@ -17,14 +17,20 @@
 
         <ul class="kanban-col" data-kanban-target="container" data-container-id="<%= container.id %>">
           <% container.cards.order(:position).each do |card| %>
-            <%# card %>
+    <%# card %>
             <li class="kanban-col-item shadow d-flex flex-row"
                 data-kanban-target="card" data-card-id="<%= card.id %>">
-              <div class="width-90">
+
+              <div class="width-87">
                 <%= card.title %>
               </div>
+    <%# Card buttons %>
+              <%= link_to [container, card], method: :get do %>
+                <i class="card-button fas fa-eye"></i>
+              <% end %>
+              <%# %,  {:remote => true, 'data-toggle' =>  "modal", 'data-target' => '#modal-window', class: 'btn btn-primary btn-lg'}  %>
               <%= link_to card, method: :delete do %>
-                <i class="detele-card fa fa-times" aria-hidden="true"></i>
+                <i class="card-button fa fa-times" aria-hidden="true"></i>
               <% end %>
             </li>
           <% end %>

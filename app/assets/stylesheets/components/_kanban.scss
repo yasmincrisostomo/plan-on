@@ -46,7 +46,7 @@ li {
 
 .planner-background{
   height: 100%;
-  background-color: white;
+  background-color: #ebe5df;
   // background-image: linear-gradient(to bottom, #6d5b98, #695798, #645498, #5f5098, #5a4d98, #5a4d98, #5a4d98, #5a4d98, #5f5098, #645498, #695798, #6d5b98);
 }
 
@@ -72,12 +72,13 @@ li {
   height: 38px;
 }
 
-.width-90{
-  width: 90%;
+.width-87{
+  width: 87%;
 }
 
-.detele-card {
+.card-button {
   color: #bfbcc4;
+  margin: 0 4px;
   &:hover {
     color: rgb(5, 6, 16);
   }
