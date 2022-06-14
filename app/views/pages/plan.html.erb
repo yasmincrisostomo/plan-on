@@ -1,44 +1,52 @@
-<h1>Planejamento de camadas</h1>
+<div class="planner-background">
+  <div class="text-center mt-2">
+  </div>
 
 
 
-<div class="kanban" data-controller="kanban">
+  <div class="kanban" data-controller="kanban">
 
-  <% @containers.each do |container| %>
-    <div class="d-flex flex-column mx-1">
-      <li class="kanban-col-name d-flex justify-content-between">
-        <%= container.card_category %>
-        <%= link_to container, method: :delete, class: "text-dark" do %>
-          <i class="fa fa-trash" aria-hidden="true"></i>
-        <% end %>
-      </li>
+    <% @containers.each do |container| %>
+      <div class="d-flex flex-column mx-1 container-background px-2">
+        <li class="kanban-col-name d-flex justify-content-between">
+          <%= container.card_category %>
+          <%= link_to container, method: :delete, class: "text-dark" do %>
+            <i class="fa fa-trash" aria-hidden="true"></i>
+          <% end %>
+        </li>
 
-      <ul class="kanban-col" data-kanban-target="container" data-container-id="<%= container.id %>">
-        <% container.cards.order(:position).each do |card| %>
-          <%# card %>
-          <li class="kanban-col-item" data-kanban-target="card" data-card-id="<%= card.id %>">
-            <%= card.title %>
-            <%= card.description %>
-          </li>
-        <% end %>
-      </ul>
+        <ul class="kanban-col" data-kanban-target="container" data-container-id="<%= container.id %>">
+          <% container.cards.order(:position).each do |card| %>
+            <%# card %>
+            <li class="kanban-col-item shadow" data-kanban-target="card" data-card-id="<%= card.id %>">
+              <%= card.title %>
+              <%= card.description %>
+            </li>
+          <% end %>
+        </ul>
 
-      <li>
-        <%= simple_form_for [container, @card] do |f| %>
-          <div class="d-flex">
-            <%= f.input :title, label: false,
-                # formaction: `/plan/containers/#{container.id}/cards/new` ,
-                placeholder: "New Card", type: "submit" %>
-          </div>
-        <% end %>
+        <li>
+          <%= simple_form_for [container, @card] do |f| %>
+            <div class="d-flex">
+              <%= f.input :title, label: false,
+                  # formaction: `/plan/containers/#{container.id}/cards/new` ,
+                  placeholder: "New Card", type: "submit" %>
+            </div>
+          <% end %>
 
-      </li>
+        </li>
+      </div>
+    <% end %>
+
+    <%# it is different dammit %>
+    <div class="mx-2">
+      <%= simple_form_for @container do |f| %>
+        <div class="d-flex flex-row" id="new-container-form">
+          <%= f.input :card_category, label: false, placeholder: "New Container" %>
+          <%= f.button :submit, "+", class: "containerbtn" %>
+        </div>
+      <% end %>
     </div>
-  <% end %>
+  </div>
 
-  <%# it is different dammit %>
-  <%= simple_form_for @container do |f| %>
-    <%= f.input :card_category, label: false, placeholder: "Add Container" %>
-    <%= f.button :submit, class: "btn btn-purple" %>
-  <% end %>
 </div>
