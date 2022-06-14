@@ -24,7 +24,6 @@ class PagesController < ApplicationController
 
     @container = Container.new
     @card = Card.new
-    # container_id = Container.find(params[:container_id])
   end
 
   # def create_card(container_id)
