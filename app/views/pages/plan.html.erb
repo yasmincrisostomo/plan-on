@@ -17,11 +17,33 @@
 
         <ul class="kanban-col" data-kanban-target="container" data-container-id="<%= container.id %>">
           <% container.cards.order(:position).each do |card| %>
-            <%# card %>
-            <li class="kanban-col-item shadow" data-kanban-target="card" data-card-id="<%= card.id %>">
-              <%= card.title %>
-              <%= card.description %>
-            </li>
+              <%# card %>
+              <li class="kanban-col-item shadow d-flex flex-row"
+                  data-kanban-target="card" data-card-id="<%= card.id %>">
+
+                <div class="width-87">
+                  <%= card.title %>
+                </div>
+              <%# MODAL code %>
+                  <div class="modal fade" id="form-modal-<%= card.id%>-<%= container.id%>" tabindex="-1" aria-hidden="true">
+                    <%= render :partial => "card", :locals => {:card => card, :container => container} %>
+                  </div>
+              <%# Card buttons %>
+                  <%# toggle card %>
+                  <div>
+                    <i
+                      type="button"
+                      data-bs-toggle="modal"
+                      data-bs-target="#form-modal-<%= card.id%>-<%= container.id%>"
+                      class="card-button fas fa-eye">
+                    </i>
+                  </div>
+                  <%# delete card %>
+                  <%= link_to card, method: :delete do %>
+                    <i class="card-button fa fa-times" aria-hidden="true"></i>
+                  <% end %>
+
+              </li>
           <% end %>
         </ul>
 
