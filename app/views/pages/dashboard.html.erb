@@ -8,19 +8,25 @@
       </div>
       <div class="badge badge-blue">Wheel of life</div>
     </div>
-    <% if @profile_traits_empty %>
-      <p>The Wheel of Life is a simple but powerful tool that helps you visualize all the important areas of your life at once. It is often used by life coaches and career coaches to give their clients a "bird's eye" view of their lives.
-        By looking at a visual representation of all the areas of your life at once, the wheel helps you to better understand which of your life areas are flourishing and which ones need the most work.</p>
-        <%= link_to "Wheel of life", edit_profiles_path, class: "btn btn-purple rounded-pill" %>
-    <% else %>
-      <ul>
-        <%  @profile_traits.each do |profiles_trait| %>
-          <li><%= profiles_trait.trait.name %></li>
-          <p><%= profiles_trait.trait.message %></p>
+    <div class="dashboard-profile">
+      <div class="">
+        <% if @profile_traits_empty %>
+          <p>The Wheel of Life is a simple but powerful tool that helps you visualize all the important areas of your life at once. It is often used by life coaches and career coaches to give their clients a "bird's eye" view of their lives.
+            By looking at a visual representation of all the areas of your life at once, the wheel helps you to better understand which of your life areas are flourishing and which ones need the most work.</p>
+            <%= link_to "Wheel of life", edit_profiles_path, class: "btn btn-purple rounded-pill" %>
+        <% else %>
+          <ul>
+            <%  @profile_traits.each do |profiles_trait| %>
+              <li><i class="fas fa-caret-right mx-2"></i><%= profiles_trait.trait.name %></li>
+              <p class="mt-2 mx-2"><%= profiles_trait.trait.message %></p>
+            <% end %>
+          </ul>
         <% end %>
-      </ul>
-    <% end %>
-    <div class="dashboard-graphic">
+      </div>
+      <div class="dashboard-graphic" data-controller="chart" data-chart-values-value='<%= @hash.to_json %>' >
+        <canvas data-chart-target="canvas"></canvas>
+        <%= button_tag "Download", data: {chart_target: "button"}, class: "d-none" %>
+      </div>
     </div>
   </div>
 
@@ -33,7 +39,7 @@
       <div class="badge badge-red">Pomodoro</div>
     </div>
     <%= image_tag "pessoa.png", class:"dashboard-img" %>
-    <%= link_to "Go to Pomodoro", pomodoros_path, class: "btn btn-purple rounded-pill" %>
+    <%= link_to "Go to Pomodoro", pomodoros_path, class: "btn btn-purple rounded-pill mt-3" %>
   </div>
 
   <div class="dashboard-card dashboard-schedule">
@@ -62,20 +68,11 @@
         <%= link_to "Planner", plan_path, class: "btn btn-purple rounded-pill" %>
     <% else %>
       <div id="checklist">
-        <% cards_index = [] %>
 
         <%  @cards.each do |card| %>
-          <% cards_index << card %>
+          <input id="<% card.id %>" type="checkbox" name="r" value="<% card.id %>">
+          <label for="<% card.id %>"><%= card.title %></label>
         <% end %>
-
-        <input id="01" type="checkbox" name="r" value="1">
-        <label for="01"><%= cards_index[0].title %></label>
-        <input id="02" type="checkbox" name="r" value="2">
-        <label for="02"><%= cards_index[1].title %></label>
-        <input id="03" type="checkbox" name="r" value="3">
-        <label for="03"><%= cards_index[2].title %></label>
-        <input id="04" type="checkbox" name="r" value="3">
-        <label for="04"><%= cards_index[3].title %></label>
       </div>
     <% end %>
     <div class="dashboard-graphic"></div>

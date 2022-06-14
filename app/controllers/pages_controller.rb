@@ -13,6 +13,11 @@ class PagesController < ApplicationController
 
     @profile_traits = current_user.profile_traits.order(:user_answer).first(4)
     @profile_traits_empty = @profile_traits.pluck(:user_answer).all?("0")
+
+    @hash = {}
+    current_user.profile_traits.each do |pro|
+      @hash[pro.trait.name] = pro.user_answer
+    end
   end
 
   def about
