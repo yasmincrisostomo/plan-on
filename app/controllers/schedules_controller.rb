@@ -15,11 +15,9 @@ class SchedulesController < ApplicationController
     end
   end
 
-
   def edit
     @schedule = Schedule.find(params[:id])
   end
-
 
   def update
     @schedule = Schedule.find(params[:id])

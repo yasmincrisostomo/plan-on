@@ -14,7 +14,7 @@ Rails.application.routes.draw do
   resources :cards, only: :destroy
   resources :tags, only: %i[destroy edit update]
 
-  resources :schedules
+  resources :schedules, only: %i[index create update destroy]
 
   resources :pomodoros, only: %i[index]
 
@@ -24,9 +24,5 @@ Rails.application.routes.draw do
   get "profile", to: "pages#profile", as: "profile"
 
   patch "update_cards", to: "pages#update_cards", as: "update_cards"
-
-  # gabriel criou root schedule tirar dúvida com T.A depois
-
-
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
