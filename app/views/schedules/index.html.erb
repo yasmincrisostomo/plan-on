@@ -29,18 +29,20 @@
 <!-- Modal -->
 <div class="modal fade" id="scheduleModal" tabindex="-1" aria-labelledby="scheduleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
-    <div class="modal-content">
+    <div class="modal-content modal-content-schedule">
       <div class="modal-header">
         <h5 class="modal-title" id="scheduleModalLabel">Add an event</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        <div data-controller="flatpickr" >
+        <div class="h-100" data-controller="flatpickr" >
           <%= simple_form_for @schedule do |f| %>
             <%= f.input :title %>
             <div class="flatpickr">
-              <%= f.input :date, as: :string, required: true, input_html: {class: "datepicker"} %>
-              <%= f.submit class: "btn btn-purple rounded-pill"%>
+              <%= f.input :date, as: :string, required: false, input_html: {class: "datepicker"} %>
+            </div>
+            <div class="d-flex justify-content-center">
+              <%= f.submit class: "btn btn-purple rounded-pill mt-2"%>
             </div>
             <% end %>
         </div>

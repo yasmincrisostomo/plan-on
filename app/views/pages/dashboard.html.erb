@@ -56,28 +56,39 @@
       </div>
       <div class="badge badge-green">Planner</div>
     </div>
-    <% if @cards_empty %>
-      <p>The importance of project management in organizations can't be overstated. When it's done right, it helps every part of the business run more smoothly.
-             It allows to focus on the work that matters, free from the distractions caused by tasks going off track or budgets spinning out of control. The visual work management tool that empowers teams to ideate, plan and manage the work in a productive and organized way.</p>
-        <%= link_to "Planner", plan_path, class: "btn btn-purple rounded-pill" %>
-    <% else %>
-      <div id="checklist">
-        <% cards_index = [] %>
 
-        <%  @cards.each do |card| %>
-          <% cards_index << card %>
+    <div class="d-flex flex-row">
+      <div class="todo-dashboard w-50">
+        <% if @cards_empty %>
+          <p>The importance of project management in organizations can't be overstated. When it's done right, it helps every part of the business run more smoothly.
+                It allows to focus on the work that matters, free from the distractions caused by tasks going off track or budgets spinning out of control. The visual work management tool that empowers teams to ideate, plan and manage the work in a productive and organized way.</p>
+            <%= link_to "Planner", plan_path, class: "btn btn-purple rounded-pill" %>
+        <% else %>
+          <div id="checklist">
+            <% cards_index = [] %>
+
+            <%  @cards.each do |card| %>
+              <% cards_index << card %>
+            <% end %>
+
+            <input id="01" type="checkbox" name="r" value="1">
+            <label for="01"><%= cards_index[0].title %></label>
+            <input id="02" type="checkbox" name="r" value="2">
+            <label for="02"><%= cards_index[1].title %></label>
+            <input id="03" type="checkbox" name="r" value="3">
+            <label for="03"><%= cards_index[2].title %></label>
+            <input id="04" type="checkbox" name="r" value="3">
+            <label for="04"><%= cards_index[3].title %></label>
+          </div>
         <% end %>
-
-        <input id="01" type="checkbox" name="r" value="1">
-        <label for="01"><%= cards_index[0].title %></label>
-        <input id="02" type="checkbox" name="r" value="2">
-        <label for="02"><%= cards_index[1].title %></label>
-        <input id="03" type="checkbox" name="r" value="3">
-        <label for="03"><%= cards_index[2].title %></label>
-        <input id="04" type="checkbox" name="r" value="3">
-        <label for="04"><%= cards_index[3].title %></label>
       </div>
-    <% end %>
+
+      <div>
+        <img src="https://res.cloudinary.com/ddz4cg7lj/image/upload/v1655317742/undraw_working_remotely_re_6b3a_cfivqx.svg" alt="" class="dashboard-img">
+      </div>
+
+    </div>
+
     <div class="dashboard-graphic"></div>
     </div>
   </div>
