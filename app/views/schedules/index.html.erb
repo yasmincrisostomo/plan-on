@@ -40,13 +40,16 @@
 <!-- Button trigger modal -->
 
 <!-- Modal -->
+
 <%= render 'shared/modal', id: "scheduleModal", title: "Add a new schedule" do %>
   <div data-controller="flatpickr" >
     <%= simple_form_for @schedule do |f| %>
       <%= f.input :title %>
       <div class="flatpickr">
         <%= f.input :date, as: :string, required: true, input_html: {class: "datepicker"} %>
-        <%= f.submit class: "btn btn-purple rounded-pill"%>
+      </div>
+      <div class="d-flex justify-content-center">
+         <%= f.submit class: "btn btn-purple rounded-pill mt-2"%>
       </div>
     <% end %>
   </div>

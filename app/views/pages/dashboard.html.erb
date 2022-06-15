@@ -62,6 +62,7 @@
       </div>
       <div class="badge badge-green">Planner</div>
     </div>
+
     <% if @cards_empty %>
       <p>The importance of project management in organizations can't be overstated. When it's done right, it helps every part of the business run more smoothly.
              It allows to focus on the work that matters, free from the distractions caused by tasks going off track or budgets spinning out of control. The visual work management tool that empowers teams to ideate, plan and manage the work in a productive and organized way.</p>
@@ -73,8 +74,12 @@
           <input id="<% card.id %>" type="checkbox" name="r" value="<% card.id %>">
           <label for="<% card.id %>"><%= card.title %></label>
         <% end %>
+      <div> // gotta check this piece of code
+        <img src="https://res.cloudinary.com/ddz4cg7lj/image/upload/v1655317742/undraw_working_remotely_re_6b3a_cfivqx.svg" alt="" class="dashboard-img">
       </div>
-    <% end %>
+
+    </div>
+
     <div class="dashboard-graphic"></div>
     </div>
   </div>
