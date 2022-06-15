@@ -1,5 +1,7 @@
 class CardsController < ApplicationController
   before_action :set_card, only: %i[show edit update destroy]
+  skip_before_action :verify_authenticity_token
+
 
   def new
     @container = Container.find(params[:container_id])

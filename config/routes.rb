@@ -5,12 +5,13 @@ Rails.application.routes.draw do
   resource :profiles, only: %i[edit update show]
 
   resources :containers, except: %i[index show destroy] do
-    resources :cards, except: :index do
+    resources :cards, except: %i[index destroy] do
       resources :tags, only: %i[new create]
     end
   end
 
   resources :containers, only: :destroy
+  resources :cards, only: :destroy
   resources :tags, only: %i[destroy edit update]
 
   resources :schedules, only: %i[index create update destroy]
