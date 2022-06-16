@@ -19,6 +19,12 @@ class ContainersController < ApplicationController
   end
 
   def update
+    @container = Container.find(params[:id])
+    if @container.update(container_params)
+      redirect_to plan_path
+    else
+      render :edit
+    end
   end
 
   def destroy

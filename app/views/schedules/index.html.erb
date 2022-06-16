@@ -7,11 +7,12 @@
 
   <%= month_calendar(events: @schedules, attribute: :date) do |date, schedules| %>
     <%= date.strftime('%d') %>
-    <ul>
+    <ul id="ul-schedule">
       <% schedules.each do |schedule| %>
         <li>
-          <div data-bs-toggle="modal" data-bs-target="#editModal<%= schedule.id %>">
-            <%= "#{l schedule.date, format: '%H:%M'} #{schedule.title}" %>
+          <div data-bs-toggle="modal" class="event-card"
+           data-bs-target="#editModal<%= schedule.id %>">
+            <%= "#{l schedule.date, format: '%H:%M'} - #{schedule.title}" %>
           </div>
         </li>
         <%= render 'shared/modal', id: "editModal#{schedule.id}", title: "Edit an event" do %>

@@ -33,7 +33,7 @@
 .simple-calendar td {
   border:1px solid $purple;
 
-  ul {text-align: start;}
+  ul {text-align: center;}
   li {
     color: white;
     list-style-type: none;
@@ -81,4 +81,14 @@
   &:hover {
     color: $purple;
   }
+}
+
+.event-card{
+  padding: 5px 4px;
+  background-color: inherit;
+  border-radius: 3px;
+}
+
+#ul-schedule{
+  padding: 0;
 }
