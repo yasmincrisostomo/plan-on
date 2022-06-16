@@ -55,7 +55,7 @@ export default class extends Controller {
             btn.addEventListener("click", () => {
               var a = document.createElement('a');
               a.href = chart.toBase64Image();
-              a.download = 'my_file_name.png';
+              a.download = 'wheel_of_life.png';
 
               // Trigger the download
               a.click();
