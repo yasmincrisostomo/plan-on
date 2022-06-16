@@ -13,7 +13,7 @@
         <% if @profile_traits_empty %>
           <p>The Wheel of Life is a simple but powerful tool that helps you visualize all the important areas of your life at once. It is often used by life coaches and career coaches to give their clients a "bird's eye" view of their lives.
             By looking at a visual representation of all the areas of your life at once, the wheel helps you to better understand which of your life areas are flourishing and which ones need the most work.</p>
-            <%= link_to "Wheel of life", edit_profiles_path, class: "btn btn-purple rounded-pill" %>
+            <%= link_to "Go to Wheel of life", edit_profiles_path, class: "btn btn-purple rounded-pill" %>
         <% else %>
           <ul>
             <%  @profile_traits.each do |profiles_trait| %>
@@ -62,20 +62,22 @@
       </div>
       <div class="badge badge-green">Planner</div>
     </div>
-    <% if @cards_empty %>
-      <p>The importance of project management in organizations can't be overstated. When it's done right, it helps every part of the business run more smoothly.
-             It allows to focus on the work that matters, free from the distractions caused by tasks going off track or budgets spinning out of control. The visual work management tool that empowers teams to ideate, plan and manage the work in a productive and organized way.</p>
-        <%= link_to "Planner", plan_path, class: "btn btn-purple rounded-pill" %>
-    <% else %>
-      <div id="checklist">
-
-        <%  @cards.each do |card| %>
-          <input id="<% card.id %>" type="checkbox" name="r" value="<% card.id %>">
-          <label for="<% card.id %>"><%= card.title %></label>
+    <div class="dashboard-plan">
+      <div class="">
+        <% if @cards_empty %>
+          <p>The importance of project management in organizations can't be overstated. When it's done right, it helps every part of the business run more smoothly.
+                It allows to focus on the work that matters, free from the distractions caused by tasks going off track or budgets spinning out of control. The visual work management tool that empowers teams to ideate, plan and manage the work in a productive and organized way.</p>
+            <%= link_to "Go to Planner", plan_path, class: "btn btn-purple rounded-pill" %>
+        <% else %>
+          <div id="checklist">
+            <%  @cards.each do |card| %>
+              <input id="<% card.id %>" type="checkbox" name="r" value="<% card.id %>">
+              <label for="<% card.id %>"><%= card.title %></label>
+            <% end %>
+          </div>
         <% end %>
       </div>
-    <% end %>
-    <div class="dashboard-graphic"></div>
+      <div class="badges"></div>
     </div>
   </div>
 </div>
