@@ -20,7 +20,13 @@ li {
   margin-bottom: 4px;
   padding: 16px;
   border-radius: 2px;
+  font-weight: bold;
+  color: white;
   // margin-left: 8px;
+}
+
+.fa-trash {
+  color: white;
 }
 
 .kanban-col-item {
@@ -46,7 +52,6 @@ li {
 
 .planner-background{
   height: 100%;
-  background-color: #ebe5df;
   // background-image: linear-gradient(to bottom, #6d5b98, #695798, #645498, #5f5098, #5a4d98, #5a4d98, #5a4d98, #5a4d98, #5f5098, #645498, #695798, #6d5b98);
 }
 
@@ -85,8 +90,9 @@ li {
 }
 
 .modal-content{
-  height: 500px;
+  height: 525px;
   width: 500px;
   padding: 20px 10px;
   border-radius: 10px;
+  color: black;
 }

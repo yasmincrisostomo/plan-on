@@ -71,6 +71,14 @@
   color: $purple;
 }
 
-.model-content {
-  height: 350px;
+.modal-card {
+  height: 400px;
+}
+
+.delete {
+  text-decoration: none;
+  color: $light-purple;
+  &:hover {
+    color: $purple;
+  }
 }
