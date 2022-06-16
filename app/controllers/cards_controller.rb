@@ -24,9 +24,11 @@ class CardsController < ApplicationController
   end
 
   def edit
+
   end
 
   def update
+
     if @card.update(card_params)
       redirect_to plan_path
     else

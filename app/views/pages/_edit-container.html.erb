@@ -1,0 +1,19 @@
+ <div class="modal-dialog">
+    <div class="modal-content modal-content-container p-4">
+      <div class="modal-header">
+          <h5 class="modal-title">Update a Container</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+      <%= simple_form_for container, html: {remote: true},
+          method: :patch do |f| %>
+        <div class="d-flex flex-column p-3">
+          <%= f.input :card_category,
+              label: false, required: false %>
+
+        </div>
+        <div class="text-center">
+          <%= f.submit :submit, value: "Update Container" ,class: "btn btn-purple rounded-pill text-center" %>
+        </div>
+      <% end %>
+    </div>
+  </div>
