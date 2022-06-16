@@ -1,16 +1,35 @@
 <div class="planner-background">
   <div class="text-center mt-2">
   </div>
-  
+
   <div class="kanban" data-controller="kanban">
 
     <% @containers.each do |container| %>
       <div class="d-flex flex-column mx-1 container-background px-2">
         <li class="kanban-col-name d-flex justify-content-between">
-          <%= container.card_category %>
-          <%= link_to container, method: :delete, class: "text-dark" do %>
-            <i class="fa fa-trash" aria-hidden="true"></i>
-          <% end %>
+          <div>
+            <%= container.card_category%>
+          </div>
+
+            <%# modal version %>
+            <div class="modal fade" id="container-modal-<%= container.id%>" tabindex="-1" aria-hidden="true">
+              <%= render :partial => "edit-container", :locals => { :container => container} %>
+            </div>
+              <%# Card buttons %>
+                  <%# toggle card %>
+            <div class="d-flex flex-row">
+              <div class="mx-2">
+                <i
+                  type="button"
+                  data-bs-toggle="modal"
+                  data-bs-target="#container-modal-<%= container.id%>"
+                  class="fas fa-edit">
+                </i>
+              </div>
+              <%= link_to container, method: :delete, class: "text-dark" do %>
+                <i class="fa fa-trash" aria-hidden="true"></i>
+              <% end %>
+            </div>
         </li>
 
         <ul class="kanban-col" data-kanban-target="container" data-container-id="<%= container.id %>">
@@ -22,10 +41,7 @@
                 <div class="width-87">
                   <%= card.title %>
                 </div>
-              <%# MODAL code %>
-                  <div class="modal fade" id="form-modal-<%= card.id%>-<%= container.id%>" tabindex="-1" aria-hidden="true">
-                    <%= render :partial => "card", :locals => {:card => card, :container => container} %>
-                  </div>
+
               <%# Card buttons %>
                   <%# toggle card %>
                   <div>
@@ -60,7 +76,7 @@
 
     <%# it is different dammit %>
     <div class="mx-2">
-      <%= simple_form_for @container do |f| %>
+      <%= simple_form_for @container, html: {remote: true} do |f| %>
         <div class="d-flex flex-row" id="new-container-form">
           <%= f.input :card_category, label: false, placeholder: "New Container" %>
           <%= f.button :submit, "+", class: "containerbtn" %>
@@ -71,3 +87,13 @@
   </div>
 
 </div>
+
+<%# MODAL code %>
+
+<% @containers.each do |container| %>
+  <% container.cards.each do |card| %>
+    <div class="modal fade" id="form-modal-<%= card.id%>-<%= container.id%>" tabindex="-1" aria-hidden="true">
+      <%= render :partial => "card", :locals => {:card => card, :container => container} %>
+    </div>
+  <% end %>
+<% end %>

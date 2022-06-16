@@ -1,6 +1,6 @@
 <%# <div class="modal fade" id="cardModal" tabindex="-1" aria-hidden="true"> %>
   <div class="modal-dialog">
-    <div class="modal-content p-4">
+    <div class="modal-content modal-content-card p-4">
       <div class="modal-header">
           <h5 class="modal-title">Update a card</h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -8,10 +8,11 @@
       <%= simple_form_for [container, card],
           method: :patch do |f| %>
         <div class="d-flex flex-column p-3">
-          <%= f.input :title, label: "Card Title", required: false, placeholder: card.title %>
+          <%= f.input :title,
+          label: "Card Title", required: false %>
           <%= f.input :description,
               as: :text, :input_html => { :cols => 5, :rows => 8 },
-              label: "Description", placeholder: card.description %>
+              label: "Description" %>
 
         </div>
         <div class="text-center">
