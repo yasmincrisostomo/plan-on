@@ -14,17 +14,21 @@
             <%= "#{l schedule.date, format: '%H:%M'} #{schedule.title}" %>
           </div>
         </li>
-        <%= render 'shared/modal', id: "editModal#{schedule.id}", title: "Edit an schedule" do %>
+        <%= render 'shared/modal', id: "editModal#{schedule.id}", title: "Edit an event" do %>
           <div data-controller="flatpickr" >
             <%= simple_form_for schedule do |f| %>
               <%= f.input :title %>
               <div class="flatpickr">
                 <%= f.input :date, as: :string, required: true, input_html: {class: "datepicker"} %>
-                <%= f.submit class: "btn btn-purple rounded-pill"%>
+                <div class="text-center">
+                  <%= f.submit :submit, value: "Update Schedule", class: "btn btn-purple rounded-pill my-3"%>
+                </div>
               </div>
             <% end %>
           </div>
-          <%= link_to "delete this event", schedule_path(schedule), method: :delete, data: { confirm: "Are you sure ?"} %>
+          <div class="text-center">
+            <%= link_to "Delete this event", schedule_path(schedule), method: :delete, data: { confirm: "Are you sure?"}, class: "delete" %>
+          </div>
         <% end %>
       <% end %>
     </ul>
@@ -41,12 +45,14 @@
 
 <!-- Modal -->
 <%= render 'shared/modal', id: "scheduleModal", title: "Add a new schedule" do %>
-  <div data-controller="flatpickr" >
+  <div data-controller="flatpickr">
     <%= simple_form_for @schedule do |f| %>
       <%= f.input :title %>
       <div class="flatpickr">
         <%= f.input :date, as: :string, required: true, input_html: {class: "datepicker"} %>
-        <%= f.submit class: "btn btn-purple rounded-pill"%>
+        <div class="text-center">
+          <%= f.submit :submit, value: "Create a Schedule", class: "btn btn-purple rounded-pill text-center mt-4"%>
+        </div>
       </div>
     <% end %>
   </div>

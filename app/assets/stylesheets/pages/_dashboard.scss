@@ -13,9 +13,12 @@
   padding: 40px;
 }
 
-.dashboard-profile {
+.dashboard-plan, .dashboard-profile {
   display: grid;
   grid-template-columns: 65% 35%;
+  p {
+    text-align: justify;
+  }
 }
 
 .dashboard-card {
