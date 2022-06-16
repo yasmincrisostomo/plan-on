@@ -2,7 +2,11 @@
   text-align: center;
   margin-top: 50px;
   margin-bottom: 30px;
-  color: $purple;
+}
+
+.calendar-title {
+  color: $light-purple;
+  margin: 0 10px;
 }
 
 .calendar-heading {
@@ -10,30 +14,30 @@
   margin-bottom: 20px;
   a {
     text-decoration: none;
-    color: $purple;;
+    color: $purple;
   }
 }
 .simple-calendar th {
   padding: 15px;
-  background: #9D779B;;
+  background: $purple;
   border-bottom: 2px solid ;
   border-collapse: collapse;
-  border-left: 1px solid #9D779B;
-  border-right: 1px solid #9D779B;
-  border-top: 0px none #9D779B;
+  border-left: 1px solid $purple;
+  border-right: 1px solid $purple;
+  border-top: 0px none $purple;
   box-sizing: border-box;
   text-align: center;
   color: white;
 }
 
 .simple-calendar td {
-  border:1px solid #9D779B;
+  border:1px solid $purple;
 
   ul {text-align: start;}
   li {
     color: white;
     list-style-type: none;
-    background: #d2a0d0;
+    background: $light-purple;
     display: ruby-base;
     margin-top: 10px;
     text-decoration: none;
@@ -65,4 +69,8 @@
 
 .table-striped > tbody > tr:nth-of-type(even) > * {
   color: $purple;
+}
+
+.model-content {
+  height: 350px;
 }
