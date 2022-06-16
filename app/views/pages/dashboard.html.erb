@@ -11,11 +11,11 @@
     <div class="dashboard-profile">
       <div class="">
         <% if @profile_traits_empty %>
-          <p>The Wheel of Life is a simple but powerful tool that helps you visualize all the important areas of your life at once. It is often used by life coaches and career coaches to give their clients a "bird's eye" view of their lives.
+          <p class="content dark-grey-text">The Wheel of Life is a simple but powerful tool that helps you visualize all the important areas of your life at once. It is often used by life coaches and career coaches to give their clients a "bird's eye" view of their lives.
             By looking at a visual representation of all the areas of your life at once, the wheel helps you to better understand which of your life areas are flourishing and which ones need the most work.</p>
             <%= link_to "Go to Wheel of life", edit_profiles_path, class: "btn btn-purple rounded-pill" %>
         <% else %>
-          <ul>
+          <ul class="content dark-grey-text">
             <%  @profile_traits.each do |profiles_trait| %>
               <li><i class="fas fa-caret-right mx-2"></i><%= profiles_trait.trait.name %></li>
               <p class="mt-2 mx-2"><%= profiles_trait.trait.message %></p>
@@ -65,7 +65,7 @@
     <div class="dashboard-plan">
       <div class="">
         <% if @cards_empty %>
-          <p>The importance of project management in organizations can't be overstated. When it's done right, it helps every part of the business run more smoothly.
+          <p class="content dark-grey-text">The importance of project management in organizations can't be overstated. When it's done right, it helps every part of the business run more smoothly.
                 It allows to focus on the work that matters, free from the distractions caused by tasks going off track or budgets spinning out of control. The visual work management tool that empowers teams to ideate, plan and manage the work in a productive and organized way.</p>
             <%= link_to "Go to Planner", plan_path, class: "btn btn-purple rounded-pill" %>
         <% else %>
