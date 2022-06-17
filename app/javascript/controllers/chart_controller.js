@@ -16,7 +16,7 @@ export default class extends Controller {
         data: Object.values(this.valuesValue),
         backgroundColor: [
           'rgba(230, 99, 132, 0.2)',
-          'rgba(255, 99, 132, 0.2)',
+          'rgba(158, 178, 59, 0.2)',
           'rgba(54, 162, 235, 0.2)',
           'rgba(255, 206, 86, 0.2)',
           'rgba(75, 192, 192, 0.2)',
@@ -25,7 +25,7 @@ export default class extends Controller {
         ],
         borderColor: [
           'rgba(230, 99, 132, 1)',
-          'rgba(255, 99, 132, 1)',
+          'rgba(158, 178, 59, 1)',
           'rgba(54, 162, 235, 1)',
           'rgba(255, 206, 86, 1)',
           'rgba(75, 192, 192, 1)',
