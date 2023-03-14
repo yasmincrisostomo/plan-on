@@ -1,1 +1,7 @@
-Plan-On is simply a platform that helps students get organized in their daily tasks. There is a plethora of resources and information for organization, but most people don't operate it the right way, so it is crucial to filter what fits your particularities to avoid content overload, so that you can perform your activities according to your available time, according to your greatest difficulties. In its program, Plan-On operates the "Wheel of Life" for the user's self-knowledge, through this tool the user will be able to discover himself/herself more and will be able to identify his/her trials and develop him/herself based on the information presented. Besides this, Plan-On counts with an agenda, timer and a planner, presenting the best tools for a better organization.
+<h1 align="center">Plan-on</h1>
+
+Plan-On is an innovative platform designed to help students organize their daily tasks with ease. With a vast array of resources and information available for organization, it can be overwhelming to filter out what works best for you. That's why Plan-On's approach is tailored to your individual needs, allowing you to focus on what's most important and prioritize your time effectively.
+
+To aid in your personal development, Plan-On's program includes the "Wheel of Life," a powerful tool for self-discovery. By using this tool, you'll gain a deeper understanding of yourself and identify areas where you may be struggling, enabling you to develop yourself further based on the information presented.
+
+Plan-On's features include an agenda, timer, and planner, providing you with the best tools for optimal organization.
